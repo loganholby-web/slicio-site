@@ -24,8 +24,8 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('reduced-motion');}catch(e){}})();</script>
-  <script type="module" crossorigin src="../assets/main-D6EiuOOW.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/style-DZXAvcCJ.css">
+  <script type="module" crossorigin src="../assets/main-CVaC4xXo.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/style-CaZ02JX_.css">
   <link rel="preload" as="font" type="font/woff2" href="../assets/big-shoulders-display-latin-wght-normal-Bn_gnr7w.woff2" crossorigin="">
   <link rel="preload" as="font" type="font/woff2" href="../assets/figtree-latin-wght-normal-D_ZTVpCC.woff2" crossorigin="">
 </head>
@@ -97,8 +97,9 @@
 <p class="taste__loading" role="status" data-web-loading hidden>Getting ready…</p>
 
 <div class="taste__signin" data-web-signin hidden>
-<h2 class="taste__h">Rate it on the web</h2>
-<p>Sign in, rate the slice, and get 1 Crust Club crust.</p>
+<h2 class="taste__h" data-web-heading>Rate it on the web</h2>
+<p data-web-intro>Log in or create an account, rate the slice, and get 1 Crust Club crust.</p>
+<div class="taste__signin-main" data-web-main>
 <div class="field field--check taste__age">
 <input id="taste-age" type="checkbox" data-web-age>
 <label for="taste-age">I am 13 or older.</label>
@@ -108,8 +109,35 @@
 <button class="btn btn--apple" type="button" data-web-apple><svg class="btn__g btn__apple-logo" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span>Continue with Apple</span></button>
 <button class="btn btn--google" type="button" data-web-google><svg class="btn__g" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true" focusable="false"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Continue with Google</span></button>
 </div>
+<div class="taste__password" data-web-password>
+<p class="taste__or"><span>or use your email</span></p>
+<div class="taste__modes" role="group" aria-label="Create an account or log in">
+<button class="taste__mode" type="button" data-web-mode="signup" aria-pressed="true">Create account</button>
+<button class="taste__mode" type="button" data-web-mode="login" aria-pressed="false">Log in</button>
+</div>
+<form class="taste__emailform" data-web-signup-form novalidate>
+<div class="field"><label for="su-first">First name</label><input id="su-first" name="first_name" type="text" autocomplete="given-name" maxlength="60" required><p class="field__error" role="alert" data-web-error="first_name" hidden></p></div>
+<div class="field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="254" required><p class="field__error" role="alert" data-web-error="email" hidden></p></div>
+<div class="field"><label for="su-password">Password</label><div class="field__pw"><input id="su-password" name="password" type="password" autocomplete="new-password" maxlength="72" autocapitalize="off" spellcheck="false" required><button class="field__toggle" type="button" data-web-pw-toggle aria-label="Show password">Show</button></div><p class="field__hint">8 or more characters.</p><p class="field__error" role="alert" data-web-error="password" hidden></p></div>
+<div class="field"><label for="su-last">Last name <span class="field__opt">(optional)</span></label><input id="su-last" name="last_name" type="text" autocomplete="family-name" maxlength="60"><p class="field__error" role="alert" data-web-error="last_name" hidden></p></div>
+<div class="field"><label for="su-phone">Phone number <span class="field__opt">(optional)</span></label><input id="su-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30"><p class="field__hint">Only used to reach you about Slicio.</p><p class="field__error" role="alert" data-web-error="phone" hidden></p></div>
+<fieldset class="field field--group"><legend>Birthday <span class="field__opt">(optional)</span></legend><div class="field__pair"><select name="birthday_month" aria-label="Birthday month"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select><select name="birthday_day" aria-label="Birthday day"><option value="">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select></div><p class="field__hint">Month and day only. We never ask for the year.</p><p class="field__error" role="alert" data-web-error="birthday" hidden></p></fieldset>
+<p class="field__error" role="alert" data-form-error hidden></p>
+<p class="taste__action"><button class="btn" type="submit">Create account</button></p>
+</form>
+<form class="taste__emailform" data-web-login-form novalidate hidden>
+<div class="field"><label for="li-email">Email</label><input id="li-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" maxlength="254" required><p class="field__error" role="alert" data-web-error="email" hidden></p></div>
+<div class="field"><label for="li-password">Password</label><div class="field__pw"><input id="li-password" name="password" type="password" autocomplete="current-password" maxlength="72" autocapitalize="off" spellcheck="false" required><button class="field__toggle" type="button" data-web-pw-toggle aria-label="Show password">Show</button></div><p class="field__error" role="alert" data-web-error="password" hidden></p></div>
+<p class="field__error" role="alert" data-form-error hidden></p>
+<p class="taste__action"><button class="btn" type="submit">Log in</button></p>
 
-<p class="taste__hint">Slicio keeps your first name and email, your ratings and your crusts. Your answer to the age box stays in this browser. <a href="../privacy/">Privacy</a></p>
+</form>
+
+</div>
+
+<p class="taste__hint">Slicio keeps your first name and email, any optional details you add, your ratings and your crusts. Your answer to the age box stays in this browser. <a href="../privacy/">Privacy</a></p>
+</div>
+
 </div>
 
 <form class="taste__form" data-web-form hidden novalidate>
@@ -160,7 +188,7 @@
 <button class="linkbtn" type="button" data-web-delete>Delete my account</button>
 </div>
 <div class="taste__confirm" data-web-confirm role="group" aria-label="Delete your account" hidden>
-<p><strong>Delete your Slicio account?</strong> This removes your name, email, crusts, ratings and comments for good. You cannot undo it. If you signed in with Apple in the app, we also ask Apple to disconnect Slicio. Slicio may still be listed in the connected apps of your Apple or Google Account, and you can remove it there.</p>
+<p><strong>Delete your Slicio account?</strong> This removes your name, email, optional details, crusts, ratings and comments for good. You cannot undo it. If you signed in with Apple in the app, we also ask Apple to disconnect Slicio. Slicio may still be listed in the connected apps of your Apple or Google Account, and you can remove it there.</p>
 <div class="taste__confirm-actions">
 <button class="btn btn--danger btn--sm" type="button" data-web-delete-yes>Yes, delete my account</button>
 <button class="btn btn--ghost btn--sm" type="button" data-web-delete-no>Cancel</button>
