@@ -24,27 +24,28 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('reduced-motion');}catch(e){}})();</script>
-  <script type="module" crossorigin src="../assets/main-CVaC4xXo.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/style-CaZ02JX_.css">
+  <script type="module" crossorigin src="../assets/ratings-shared-B6BZ071r.js"></script>
+  <script type="module" crossorigin src="../assets/main-fXrFjHPd.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/style-Cd2H0PYI.css">
   <link rel="preload" as="font" type="font/woff2" href="../assets/big-shoulders-display-latin-wght-normal-Bn_gnr7w.woff2" crossorigin="">
   <link rel="preload" as="font" type="font/woff2" href="../assets/figtree-latin-wght-normal-D_ZTVpCC.woff2" crossorigin="">
 </head>
 <body class="page-taste">
-<!-- lineup: week 43 -->
+<!-- lineup: week 42 -->
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-tone="light" data-header>
 <div class="site-header__bar">
 <a class="brand" href="../" aria-label="Slicio Pizza, home">
 <span class="brand__icon" aria-hidden="true"></span><span class="brand__word" aria-hidden="true"></span>
 </a>
-<nav class="primary-nav" aria-label="Primary"><ul><li><a href="../menu/">Menu</a></li><li><a href="../rewards/">Crust Club</a></li><li><a href="../vote/">Vote</a></li><li><a href="../catering/">Catering</a></li><li><a href="../faq/">FAQ</a></li></ul></nav>
+<nav class="primary-nav" aria-label="Primary"><ul><li><a href="../menu/">Menu</a></li><li><a href="../order/">Order</a></li><li><a href="../rewards/">Crust Club</a></li><li><a href="../vote/">Vote</a></li><li><a href="../catering/">Catering</a></li><li><a href="../faq/">FAQ</a></li></ul></nav>
 <span class="status-pill site-header__cta">Coming soon</span>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
 <span class="sr-only">Menu</span><span class="menu-toggle__bars" aria-hidden="true"></span>
 </button>
 </div>
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu data-tone="red" hidden>
-<nav aria-label="Mobile"><ul><li style="--i:0"><a href="../menu/">Menu</a></li><li style="--i:1"><a href="../rewards/">Crust Club</a></li><li style="--i:2"><a href="../vote/">Vote</a></li><li style="--i:3"><a href="../catering/">Catering</a></li><li style="--i:4"><a href="../faq/">FAQ</a></li></ul></nav>
+<nav aria-label="Mobile"><ul><li style="--i:0"><a href="../menu/">Menu</a></li><li style="--i:1"><a href="../order/">Order</a></li><li style="--i:2"><a href="../rewards/">Crust Club</a></li><li style="--i:3"><a href="../vote/">Vote</a></li><li style="--i:4"><a href="../catering/">Catering</a></li><li style="--i:5"><a href="../faq/">FAQ</a></li></ul></nav>
 <p class="mobile-menu__note">Coming soon to the Chicago suburbs.<br>Let It Crust.</p>
 </div>
 </header>
@@ -89,7 +90,10 @@
 </div>
 </li>
 </ol>
-<p class="taste__switch"><button class="linkbtn" type="button" data-taste-use-web hidden>No app? Rate it on the web</button></p>
+<div class="taste__browser" data-taste-browser hidden>
+<p><strong>No app?</strong> You can rate this slice right here in your browser. Log in once, and every card after this one is quick.</p>
+<p class="taste__action"><button class="btn btn--ghost" type="button" data-taste-use-web hidden>Rate it in my browser</button></p>
+</div>
 </div>
 
 <div class="taste__flow taste__web" data-taste-web>
@@ -142,21 +146,21 @@
 
 <form class="taste__form" data-web-form hidden novalidate>
 <p class="taste__edit-note" data-web-edit-note hidden>You already rated this slice. You can change your answers while the taste test is open. You keep the crust you already got.</p>
-<fieldset class="taste__q">
-<legend class="taste__h">How was it?</legend>
-<div class="taste__rates"><label class="taste__rate"><input class="sr-only" type="radio" name="rating" value="1"><span class="taste__rate-n">1</span><span class="taste__rate-w">Not for me</span></label><label class="taste__rate"><input class="sr-only" type="radio" name="rating" value="2"><span class="taste__rate-n">2</span><span class="taste__rate-w">Meh</span></label><label class="taste__rate"><input class="sr-only" type="radio" name="rating" value="3"><span class="taste__rate-n">3</span><span class="taste__rate-w">It is fine</span></label><label class="taste__rate"><input class="sr-only" type="radio" name="rating" value="4"><span class="taste__rate-n">4</span><span class="taste__rate-w">Good</span></label><label class="taste__rate"><input class="sr-only" type="radio" name="rating" value="5"><span class="taste__rate-n">5</span><span class="taste__rate-w">Love it</span></label></div>
+<div class="rate-fields" data-rate-fields>
+<fieldset class="taste__q rate-q">
+<legend class="taste__h rate-q__legend">How was it?</legend>
+<div class="stars" data-stars><label class="star"><input class="sr-only" type="radio" name="rating" value="1"><span class="sr-only">1 star, Not for me</span><svg class="star__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.84 5.96 6.56.84-4.8 4.55 1.2 6.5L12 17.2l-5.8 3.25 1.2-6.5-4.8-4.55 6.56-.84z"/></svg></label><label class="star"><input class="sr-only" type="radio" name="rating" value="2"><span class="sr-only">2 stars, Meh</span><svg class="star__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.84 5.96 6.56.84-4.8 4.55 1.2 6.5L12 17.2l-5.8 3.25 1.2-6.5-4.8-4.55 6.56-.84z"/></svg></label><label class="star"><input class="sr-only" type="radio" name="rating" value="3"><span class="sr-only">3 stars, It is fine</span><svg class="star__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.84 5.96 6.56.84-4.8 4.55 1.2 6.5L12 17.2l-5.8 3.25 1.2-6.5-4.8-4.55 6.56-.84z"/></svg></label><label class="star"><input class="sr-only" type="radio" name="rating" value="4"><span class="sr-only">4 stars, Good</span><svg class="star__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.84 5.96 6.56.84-4.8 4.55 1.2 6.5L12 17.2l-5.8 3.25 1.2-6.5-4.8-4.55 6.56-.84z"/></svg></label><label class="star"><input class="sr-only" type="radio" name="rating" value="5"><span class="sr-only">5 stars, Love it</span><svg class="star__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.84 5.96 6.56.84-4.8 4.55 1.2 6.5L12 17.2l-5.8 3.25 1.2-6.5-4.8-4.55 6.56-.84z"/></svg></label></div>
+<p class="stars__word" data-stars-word aria-live="polite">Tap a star</p>
 </fieldset>
-<fieldset class="taste__q">
-<legend class="taste__h">Would you buy this slice?</legend>
-<div class="taste__yn">
-<label class="taste__rate taste__rate--wide"><input class="sr-only" type="radio" name="buy" value="yes"><span class="taste__rate-n">Yes</span></label>
-<label class="taste__rate taste__rate--wide"><input class="sr-only" type="radio" name="buy" value="no"><span class="taste__rate-n">No</span></label>
-</div>
+<fieldset class="taste__q rate-q">
+<legend class="taste__h rate-q__legend">Would you buy this slice?</legend>
+<div class="rate-yn" data-rate-again><label class="rate-yn__opt"><input class="sr-only" type="radio" name="buy" value="yes"><span>Yes</span></label><label class="rate-yn__opt"><input class="sr-only" type="radio" name="buy" value="no"><span>No</span></label><label class="rate-yn__opt"><input class="sr-only" type="radio" name="buy" value="skip" checked><span>Skip</span></label></div>
 </fieldset>
 <div class="field">
 <label for="taste-comment">Anything else? <span class="field__opt">(optional)</span></label>
-<textarea id="taste-comment" name="comment" rows="4" maxlength="280" placeholder="What did you like, or what would you change?" data-web-comment></textarea>
-<p class="field__hint" aria-live="polite" data-web-count>0 of 280</p>
+<textarea id="taste-comment" name="comment" rows="3" maxlength="280" placeholder="What did you like, or what would you change?" data-rate-comment></textarea>
+<p class="field__hint" aria-live="polite" data-rate-count>0 of 280</p>
+</div>
 </div>
 <p class="field__error taste__form-error" role="alert" data-web-form-error hidden></p>
 <p class="taste__action"><button class="btn" type="submit" data-web-submit>Send my rating</button></p>
@@ -176,6 +180,7 @@
 <p data-web-recap-buy></p>
 <p data-web-recap-comment></p>
 </div>
+<p class="taste__next" data-web-next>Next pizza? Scan its card to rate it too.</p>
 <p class="taste__action" data-web-change-row><button class="btn btn--ghost" type="button" data-web-change>Change my rating</button></p>
 <p class="taste__action"><a class="btn btn--ghost" href="../account/">See My Slicio</a></p>
 </section>
@@ -211,7 +216,7 @@
 </div>
 <nav class="site-footer__nav" aria-label="Footer">
 <h2 class="site-footer__h">Explore</h2>
-<ul><li><a href="../menu/">Menu</a></li><li><a href="../rewards/">Crust Club</a></li><li><a href="../vote/">Vote</a></li><li><a href="../catering/">Catering</a></li><li><a href="../team/">Team</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../account/">My Slicio</a></li></ul>
+<ul><li><a href="../menu/">Menu</a></li><li><a href="../order/">Order</a></li><li><a href="../rewards/">Crust Club</a></li><li><a href="../vote/">Vote</a></li><li><a href="../catering/">Catering</a></li><li><a href="../team/">Team</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../account/">My Slicio</a></li></ul>
 </nav>
 <nav class="site-footer__nav" aria-label="Legal">
 <h2 class="site-footer__h">Legal</h2>
