@@ -328,7 +328,7 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 .gauge .trk,.gauge .val{fill:none;stroke-width:42;stroke-linecap:round}
 .gauge .trk{stroke:var(--charcoal-2)}
 .gauge .val{stroke:var(--honey);stroke-dasharray:1414;stroke-dashoffset:1414;transition:stroke-dashoffset 2.6s var(--ease-io)}
-.s1 .gauge .val{stroke-dashoffset:71}
+.s2 .gauge .val{stroke-dashoffset:71}
 .gauge .ticks line{stroke:#8c847b;stroke-width:5;stroke-linecap:round}
 .gauge .reading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding-top:24px}
 .gauge .reading b{font-size:170px;line-height:.85;color:var(--honey)}
@@ -537,6 +537,69 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 .th-main .t-l{margin-top:26px}
 .th-logo{right:var(--side);top:180px;height:520px;width:auto}
 
+/* ---------- elevator pitch slides (E1 to E6) ---------- */
+.pr-list.big{top:235px}
+.pr-list.big .pr-item{padding:26px 34px;gap:28px}
+.pr-list.big .pr-item span{font-size:58px}
+.pr-list.big .x{width:64px;height:64px}
+.pr-list.big .x::before,.pr-list.big .x::after{left:16px;top:30px;width:32px;height:6px}
+.namechip{font-size:34px;padding:10px 30px;margin-bottom:2px}
+.mk-chips{top:706px;bottom:auto}
+.mk-six{left:var(--side);bottom:var(--bot);display:flex;align-items:center;gap:30px}
+.mk-six p{white-space:nowrap}
+.mk-vote{right:var(--side);bottom:var(--bot);display:flex;align-items:center;gap:26px}
+.mk-vote img{height:110px;width:auto}
+.mk-vote p{white-space:nowrap}
+.ask-top{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.ask-top h2{font-size:370px;line-height:.82;margin-top:66px}
+.ask-top .pill{font-size:40px;padding:14px 36px;margin-top:40px}
+.ea-tiles{left:var(--side);right:var(--side);bottom:var(--bot)}
+.built-row{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.bt{background:var(--card);border-radius:22px;padding:26px 30px 32px;border-top:14px solid var(--red)}
+.bt b{display:block;font-size:150px;line-height:.9;color:var(--honey)}
+.bt b i{font-style:normal}
+.bt p{margin-top:8px}
+.invest{left:var(--side);right:var(--side);bottom:var(--bot);background:var(--red);border-radius:26px;padding:30px 50px 36px;color:#fff}
+.invest h2{font-size:172px;line-height:.9;white-space:nowrap}
+.invest p{margin-top:10px;color:#fff}
+.fa-left h2.h-xxl{font-size:290px;line-height:.82;margin:50px 0 44px}
+.fa-small{display:flex;flex-direction:column;gap:10px;margin-top:26px;align-items:flex-start}
+.fa-small li{display:flex;align-items:baseline;gap:20px;background:var(--charcoal);color:var(--flour);border-radius:16px;padding:6px 26px 8px}
+.fa-small b{font-size:54px;line-height:1;color:var(--honey)}
+.fa-small span{font-size:30px;font-weight:700}
+
+/* ---------- intro slides (P1 to P5) ---------- */
+.vsi{border-radius:24px;padding:22px 34px 26px;margin-top:26px}
+.vsi .kicker{font-size:30px}
+.vsi.them{background:#2a2725}
+.vsi.them .kicker{color:var(--soft)}
+.vsi.them .disp{font-size:84px;line-height:.95;color:var(--soft);margin-top:8px}
+.vsi.us{background:var(--flour);color:var(--charcoal)}
+.vsi.us .kicker{color:var(--charcoal);display:flex;align-items:center;gap:18px}
+.vsi.us .kicker::before{content:"";width:56px;height:8px;border-radius:4px;background:var(--red)}
+.vsi.us .disp{font-size:112px;line-height:.9;margin-top:8px}
+.vsi.us .disp b{color:var(--red)}
+.vsi.us .t-xl{margin-top:8px}
+.vsi.us .t-m{margin-top:6px;color:var(--charcoal-2)}
+.st-chips{left:var(--side);top:640px;display:flex;gap:26px}
+.st-chips .pill{font-size:60px;padding:18px 54px}
+.invest.tag{padding:26px 50px 30px}
+.invest.tag h2{font-size:150px;line-height:.9}
+.invest .cue{margin-top:16px;background:var(--charcoal);color:var(--flour)}
+.ic-row{display:flex;gap:20px;margin-top:26px;flex-wrap:wrap}
+.ic-row .pill{font-size:44px;padding:16px 40px}
+.ic-name{left:var(--side);top:400px}
+.ic-name h2{font-size:190px;line-height:.88}
+.ic-name .h-m{margin-top:10px;color:var(--honey)}
+#s-vs .gs-text{width:800px}
+#s-vs .vsi.us .disp{font-size:100px}
+#s-start h2.h-xl{font-size:170px}
+#s-start .st-chips{top:520px}
+#s-start .invest h2{font-size:130px}
+#s-start .invest p{font-size:92px}
+.ic-name{top:350px}
+.ic-name h2{font-size:170px}
+
 /* ---------- reader mode: portrait phones and small portrait tablets (set by deck.js, body.reader) ---------- */
 html.reader-on,html.reader-on body{overflow:auto;height:auto;background:var(--charcoal)}
 body.reader{overflow:auto;height:auto;font-size:16px}
@@ -731,6 +794,45 @@ body.reader .th-logo{display:block;width:46%!important;margin:24px auto 0}
 body.reader .pie .pp{animation:none!important;opacity:1}
 body.reader *,body.reader *::before,body.reader *::after{transition:none!important;animation:none!important}
 body.reader .pie .pp{opacity:1!important}
+/* elevator pitch slides */
+body.reader .pr-list.big .pr-item span{font-size:clamp(20px,5.4vw,26px)!important}
+body.reader .pr-list.big .x{width:36px;height:36px}
+body.reader .pr-list.big .x::before,body.reader .pr-list.big .x::after{left:8px;top:16px;width:20px;height:4px}
+body.reader .namechip{display:inline-block}
+body.reader .mk-chips{display:flex!important}
+body.reader .mk-six,body.reader .mk-vote{margin-top:6px}
+body.reader .mk-vote img{height:70px}
+body.reader .mk-vote p{white-space:normal}
+body.reader .slide .ask-top h2.h-mega{font-size:clamp(60px,21vw,170px)!important;white-space:nowrap;margin-top:12px}
+body.reader .ask-top .pill{font-size:clamp(16px,4.4vw,21px)!important;display:inline-block}
+body.reader .tile b{font-size:clamp(48px,14vw,80px)!important}
+body.reader .ea-tiles{grid-template-columns:1fr;gap:10px}
+body.reader .built-row{grid-template-columns:1fr 1fr;gap:12px}
+body.reader .bt{padding:14px 16px 16px}
+body.reader .bt b{font-size:clamp(44px,13vw,72px)!important}
+body.reader .invest{padding:18px 20px 22px;border-radius:18px}
+body.reader .invest h2{font-size:clamp(46px,14vw,80px)!important;white-space:normal}
+body.reader .invest p{font-size:clamp(28px,8vw,44px)!important;margin-top:6px}
+body.reader .fa-small li{flex-wrap:wrap;gap:2px 14px;padding:6px 16px 8px}
+body.reader .fa-small b{font-size:clamp(34px,10vw,48px)}
+body.reader .fa-small span{font-size:clamp(16px,4.4vw,21px)}
+body.reader .mk-six{flex-wrap:wrap;gap:10px 18px}
+body.reader .mk-six p{white-space:normal}
+body.reader .mk-six .dots{gap:8px}
+body.reader .mk-six .dots i{width:clamp(30px,8.5vw,46px);height:clamp(30px,8.5vw,46px);border-width:5px}
+/* intro slides */
+body.reader .vsi{padding:16px 18px 18px;margin-top:14px}
+body.reader .vsi.them .disp{font-size:clamp(30px,9vw,46px)!important}
+body.reader .vsi.us .disp{font-size:clamp(44px,13vw,70px)!important}
+body.reader .vsi .kicker{font-size:16px}
+body.reader .namechip{margin-bottom:6px}
+body.reader .st-chips{display:flex!important;flex-wrap:wrap;gap:10px}
+body.reader .st-chips .pill{font-size:clamp(20px,5.6vw,28px)!important;padding:10px 24px!important}
+body.reader .ic-row{gap:10px}
+body.reader .ic-name h2{font-size:clamp(56px,17vw,100px)!important}
+body.reader .ic-name .h-m{font-size:clamp(34px,10vw,56px)!important}
+body.reader .invest.tag h2{font-size:clamp(40px,12vw,74px)!important;white-space:normal}
+body.reader .invest .cue{display:inline-block}
 </style>
 </head>
 <body class="mode-intro">
@@ -789,11 +891,102 @@ body.reader .pie .pp{opacity:1!important}
   </div>
 
 
+<!-- ===================== P1 THE HOOK ===================== -->
+<section class="slide" id="s-problem" data-title="Intro: the hook" data-tone="dark" data-time="10" data-steps="3" data-who="Intro">
+  <div class="pos pr-left">
+    <p class="kicker rv">The problem</p>
+    <h2 class="disp rv" style="--d:.1s">Think about the last slice you <span class="honey">bought.</span></h2>
+  </div>
+  <ul class="pos pr-list big">
+    <li class="pr-item at1"><i class="x"></i><span>Under a heat lamp.</span></li>
+    <li class="pr-item at2"><i class="x"></i><span>The same slice as last week.</span></li>
+    <li class="pr-item at3"><i class="x"></i><span>Gone in four bites.</span></li>
+  </ul>
+  <div class="pos pr-row at3" data-gen="grey" data-n="10"></div>
+  <aside class="notes script">
+    <p data-s="0">Think about the last slice of pizza you bought.</p>
+    <p data-s="1">It sat under a heat lamp.</p>
+    <p data-s="2">It was the same slice you got last week.</p>
+    <p data-s="3">And it was gone in four bites.</p>
+  </aside>
+</section>
+<!-- ===================== P2 THE SAME MENU VS SLICIO ===================== -->
+<section class="slide" id="s-vs" data-title="Intro: the same menu vs Slicio" data-tone="dark" data-time="14" data-steps="1" data-who="Intro">
+  <div class="pos gs-text">
+    <p class="pill honey rv namechip">Logan Holby, Founder and CEO</p>
+    <div class="vsi them rv" style="--d:.15s"><p class="kicker">Most pizza places</p><p class="disp">The same menu, every time.</p></div>
+    <div class="vsi us at1"><p class="kicker">Slicio</p><p class="disp"><b data-counter="3">3</b> new giant slices</p><p class="t-xl">every Sunday night</p><p class="t-m">Each one a quarter of a 16-inch pie.</p></div>
+  </div>
+  <div class="pos gs-pie rv z" style="--d:.15s" data-split-step="1">
+    <svg class="pie" data-pie="1" viewBox="-440 -440 880 880" width="860" height="860" aria-hidden="true"></svg>
+    <div class="ruler" aria-hidden="true"><i></i><span>16 inch</span><i></i></div>
+  </div>
+  <aside class="notes script">
+    <p data-s="0">Hi, I'm Logan Holby, founder and CEO of Slicio Pizza. Most pizza places hand you the same menu every time you walk in.</p>
+    <p data-s="1">We don't. Every Sunday night, we reveal three new giant slices, each one a quarter of a 16-inch pie.</p>
+  </aside>
+</section>
+<!-- ===================== P3 THE COOKBOOK AND THE OVEN ===================== -->
+<section class="slide" id="s-oven" data-title="Intro: 150 recipes and the oven" data-tone="dark" data-time="10" data-steps="2" data-who="Intro">
+  <div class="pos ov-left">
+    <div class="gauge rv z" style="--d:.15s">
+      <svg viewBox="0 0 760 760" aria-hidden="true">
+        <g class="ticks"></g>
+        <path class="trk" d="M 167.9 592.1 A 300 300 0 1 1 592.1 592.1"/>
+        <path class="val" d="M 167.9 592.1 A 300 300 0 1 1 592.1 592.1"/>
+      </svg>
+      <div class="reading at2 n"><b class="disp"><i data-counter="950">950</i><sup>&deg;F</sup></b><span class="t-l">Stone oven</span></div>
+    </div>
+    <p class="t-m ov-cap at2" style="--d:.3s">We test every recipe in it.</p>
+  </div>
+  <div class="pos ov-right">
+    <h2 class="disp rv" style="--d:.1s"><b class="honey" data-counter="150">150</b> recipes.<br><b class="honey" data-counter="20">20</b> styles.</h2>
+    <div class="wall rv" data-gen="wall"></div>
+    <p class="t-xl ov-line at1">From <b>Chicago tavern</b> to <b class="honey">Detroit pan.</b></p>
+  </div>
+  <aside class="notes script">
+    <p data-s="0">We've already built 150 recipes in 20 styles,</p>
+    <p data-s="1">from Chicago tavern to Detroit pan,</p>
+    <p data-s="2">all tested in a 950-degree stone oven.</p>
+  </aside>
+</section>
+<!-- ===================== P4 STARTING IN MUNDELEIN ===================== -->
+<section class="slide" id="s-start" data-title="Intro: starting in Mundelein" data-tone="dark" data-time="8" data-steps="1" data-who="Intro">
+  <p class="kicker rv">Right here</p>
+  <h2 class="disp h-xl rv" style="--d:.1s">Starting in <span class="honey">Mundelein.</span></h2>
+  <ul class="pos st-chips rv" style="--d:.4s"><li class="pill honey">Students</li><li class="pill honey">Families</li><li class="pill honey">Teams</li></ul>
+  <div class="pos invest at1">
+    <h2 class="disp h-xxl">Try one.</h2>
+    <p class="disp h-m">Come back every Sunday.</p>
+  </div>
+  <aside class="notes script">
+    <p data-s="0">We're starting right here in Mundelein, with students, families and teams.</p>
+    <p data-s="1">Try one slice, and you'll want to see what next Sunday brings.</p>
+  </aside>
+</section>
+<!-- ===================== P5 THE CLOSE ===================== -->
+<section class="slide" id="s-intro-close" data-title="Intro: close" data-tone="dark" data-time="10" data-steps="2" data-who="Intro">
+  <p class="kicker rv">Today, the team shows you</p>
+  <ul class="ic-row rv" style="--d:.15s"><li class="pill honey">How we make it</li><li class="pill honey">How we sell it</li><li class="pill honey">How it makes money</li></ul>
+  <div class="pos ic-name at1">
+    <h2 class="disp">Logan Holby.</h2>
+    <p class="disp h-m">Founder and CEO.</p>
+  </div>
+  <div class="pos invest tag at2">
+    <h2 class="disp">Slicio. Let It Crust.</h2>
+    <p class="pill cue">Next: meet the team</p>
+  </div>
+  <aside class="notes script">
+    <p data-s="0">Today my team will show you how we make it, how we sell it, and how it makes money.</p>
+    <p data-s="1">Once again, I'm Logan Holby, and this is Slicio.</p>
+    <p data-s="2">Let It Crust.</p>
+  </aside>
+</section>
 <!-- ===================== 1 THE TEAM ===================== -->
-<section class="slide" id="s-team" data-title="The team" data-tone="dark" data-time="24" data-steps="0" data-who="The team">
+<section class="slide" id="s-team" data-title="Meet the team" data-tone="dark" data-time="20" data-steps="0" data-who="Meet the team">
   <div class="team-top">
     <div>
-      <p class="kicker rv">The team</p>
+      <p class="kicker rv">Meet the team</p>
       <h2 class="disp rv" style="--d:.1s">We are <span class="red">Slicio.</span></h2>
     </div>
     <p class="t-l soft rv r" style="--d:.25s;text-align:right">Four Mundelein High School students.<br>incubatorEDU, 2026.</p>
@@ -811,48 +1004,6 @@ body.reader .pie .pp{opacity:1!important}
   </aside>
 </section>
 
-<!-- ===================== 2 THE PROBLEM ===================== -->
-<section class="slide" id="s-problem" data-title="The problem" data-tone="dark" data-time="32" data-steps="5" data-who="The problem">
-  <div class="pos pr-left">
-    <p class="kicker rv">The problem</p>
-    <h2 class="disp rv" style="--d:.1s">Think about the last slice you <span class="honey">bought.</span></h2>
-  </div>
-  <ul class="pos pr-list">
-    <li class="pr-item at1"><i class="x"></i><span>Under a heat lamp.</span></li>
-    <li class="pr-item at2"><i class="x"></i><span>The same slice as last week.</span></li>
-    <li class="pr-item at3"><i class="x"></i><span>Gone in four bites.</span></li>
-    <li class="pr-item at4"><i class="x"></i><span>Soggy before you open the box.</span></li>
-    <li class="pr-item at5"><i class="x"></i><span>One style, forever.</span></li>
-  </ul>
-  <div class="pos pr-row at5" data-gen="grey" data-n="10"></div>
-  <aside class="notes">
-    <p data-s="0">Think about the last slice of pizza you bought.</p>
-    <p data-s="1">It sat under a heat lamp.</p>
-    <p data-s="2">It was the same slice as last week.</p>
-    <p data-s="3">It was gone in four bites.</p>
-    <p data-s="4">Takeout slices get soggy and are hard to reheat.</p>
-    <p data-s="5">Most pizza places pick one style and make it the same way forever.</p>
-  </aside>
-</section>
-
-<!-- ===================== 3 GIANT SLICES ===================== -->
-<section class="slide" id="s-giant" data-title="Giant slices" data-tone="dark" data-time="16" data-steps="1" data-who="The product">
-  <div class="pos gs-text">
-    <p class="kicker rv">The product</p>
-    <h2 class="disp rv" style="--d:.1s">Giant<br><span class="red">slices.</span></h2>
-    <div class="gs-new at1"><b class="disp honey" data-counter="3">3</b><span class="t-xl">new slices<br>every Sunday night</span></div>
-    <p class="gs-note t-m at1" style="--d:.25s">One slice = a quarter of the pie.<br>About 1.6x a typical slice.</p>
-  </div>
-  <div class="pos gs-pie rv z" style="--d:.15s">
-    <svg class="pie" data-pie="1" viewBox="-440 -440 880 880" width="860" height="860" aria-hidden="true"></svg>
-    <div class="ruler" aria-hidden="true"><i></i><span>16 inch</span><i></i></div>
-  </div>
-  <aside class="notes">
-    <p data-s="0">We sell giant slices. Each slice is a quarter of a 16-inch pie, about 1.6 times a typical slice.</p>
-    <p data-s="1">Every Sunday night we reveal 3 new slices. Menu runs Monday to Saturday.</p>
-  </aside>
-</section>
-
 <!-- ===================== 4 WHAT GOES IN ===================== -->
 <section class="slide" id="s-ing" data-title="What goes in matters" data-tone="dark" data-time="18" data-steps="4" data-who="The product">
   <h2 class="disp h-l rv">What goes in <span class="honey">matters.</span></h2>
@@ -867,31 +1018,6 @@ body.reader .pie .pp{opacity:1!important}
     <p data-s="2">Cheese: fresh mozzarella.</p>
     <p data-s="3">Sauce: made fresh from tomatoes imported from Italy.</p>
     <p data-s="4">Everything else is made or bought fresh every day.</p>
-  </aside>
-</section>
-
-<!-- ===================== 5 THE OVEN AND THE COOKBOOK ===================== -->
-<section class="slide" id="s-oven" data-title="The oven and the cookbook" data-tone="dark" data-time="26" data-steps="3" data-who="The product">
-  <div class="pos ov-left">
-    <div class="gauge rv z" style="--d:.15s">
-      <svg viewBox="0 0 760 760" aria-hidden="true">
-        <g class="ticks"></g>
-        <path class="trk" d="M 167.9 592.1 A 300 300 0 1 1 592.1 592.1"/>
-        <path class="val" d="M 167.9 592.1 A 300 300 0 1 1 592.1 592.1"/>
-      </svg>
-      <div class="reading at1 n"><b class="disp"><i data-counter="950">950</i><sup>&deg;F</sup></b><span class="t-l">Stone oven</span></div>
-    </div>
-    <p class="t-m ov-cap at1" style="--d:.3s">We test our recipes in it.</p>
-  </div>
-  <div class="pos ov-right">
-    <h2 class="disp at2"><b class="honey" data-counter="150">150</b> recipes.<br><b class="honey" data-counter="20">20</b> styles.</h2>
-    <div class="wall at2" data-gen="wall"></div>
-    <p class="t-xl ov-line at3">From <b>Chicago tavern</b> to <b class="honey">Detroit pan.</b></p>
-  </div>
-  <aside class="notes">
-    <p data-s="1">Recipes are tested in a 950-degree stone oven.</p>
-    <p data-s="2">The cookbook has 150 recipes in 20 styles.</p>
-    <p data-s="3">From Chicago tavern to Detroit pan pizza.</p>
   </aside>
 </section>
 
@@ -1273,6 +1399,7 @@ body.reader .pie .pp{opacity:1!important}
 </section>
 
 
+
   <div id="egg"></div>
 </div>
 </div>
@@ -1302,6 +1429,7 @@ var meta = slides.map(function (el) {
   return {
     el: el, id: el.id, title: el.dataset.title || '', who: el.dataset.who || '',
     time: +el.dataset.time || 0, steps: +el.dataset.steps || 0, tone: el.dataset.tone || 'dark', music: el.dataset.music || '',
+    script: !!$('.notes.script', el),
     notes: $$('.notes p', el).map(function (p) { return { s: +p.dataset.s || 0, t: p.textContent }; })
   };
 });
@@ -1477,6 +1605,7 @@ function clearTimers() { timers.forEach(clearTimeout); timers = []; }
 function onEnter(m, instant) {
   var el = m.el;
   $$('.gs-pie', el).forEach(function (p) {
+    if (p.dataset.splitStep) return;
     if (instant || REDUCE) { p.classList.add('split'); return; }
     timers.push(later(function () { p.classList.add('split'); }, 2900));
   });
@@ -1498,6 +1627,7 @@ function applyStep(i, step, prev, instant) {
     }
   }
   $$('[data-g]', el).forEach(function (b) { b.classList.toggle('on', +b.dataset.g === step); });
+  $$('.gs-pie[data-split-step]', el).forEach(function (p) { p.classList.toggle('split', step >= +p.dataset.splitStep); });
 }
 
 function musicTarget() {
@@ -1785,7 +1915,7 @@ function initNotes() {
       $('#n-title').textContent = m.title;
       $('#n-meta').textContent = (ns.cur + 1) + ' of ' + TOTAL + ' | ' + m.who + ' | target ' + m.time + ' s | step ' + ns.step + ' of ' + m.steps;
       $('#n-cue').textContent = m.steps ? (ns.step < m.steps ? 'Next press reveals step ' + (ns.step + 1) : 'All steps shown, next press moves on') : 'No steps on this slide';
-      $('#n-script').innerHTML = '<div class="cue" style="margin:10px 0 8px">Key facts on this slide</div>' + m.notes.map(function (n) { var c = n.s === ns.step ? 'now' : (n.s < ns.step ? 'past' : ''); return '<p class="' + c + '">' + n.t.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</p>'; }).join('');
+      $('#n-script').innerHTML = '<div class="cue" style="margin:10px 0 8px">' + (m.script ? 'Intro script' : 'Key facts on this slide') + '</div>' + m.notes.map(function (n) { var c = n.s === ns.step ? 'now' : (n.s < ns.step ? 'past' : ''); return '<p class="' + c + '">' + n.t.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</p>'; }).join('');
       var nx = (ns.step < m.steps) ? null : meta[ns.cur + 1];
       $('#n-next').textContent = nx ? nx.title : (ns.step < m.steps ? 'Step ' + (ns.step + 1) + ' of this slide' : 'End of deck');
       $('#n-nextmeta').textContent = nx ? nx.who : '';
