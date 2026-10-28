@@ -2119,6 +2119,11 @@ function init() {
   var onChange2 = function () { if (readerWanted() !== READER) location.reload(); };
   if (mq2.addEventListener) mq2.addEventListener('change', onChange2); else if (mq2.addListener) mq2.addListener(onChange2);
   var h = parseInt((location.hash || '').slice(1), 10);
+  // A shared link always opens on the intro, even if it ends in a slide number copied from the address bar.
+  // Only a reload (mid-presentation) or a link with options (?app=, ?pdf=, tests) jumps straight to that slide.
+  var nav = (window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || {};
+  var resume = nav.type === 'reload' || location.search.length > 1;
+  if (h >= 1 && h <= TOTAL && !resume) { history.replaceState(null, '', location.pathname); h = 0; }
   if (h >= 1 && h <= TOTAL) {
     S.started = Date.now(); S.last = Date.now(); S.mode = 'show';
     document.body.className = 'mode-show';
