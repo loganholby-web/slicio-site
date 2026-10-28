@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /team/menu/
+Disallow: /team/orders/
+Disallow: /team/table/
+Disallow: /team/results/
+Sitemap: https://sliciopizza.com/sitemap.xml
