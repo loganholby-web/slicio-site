@@ -52,7 +52,7 @@
 <main id="main" tabindex="-1">
 <section class="page-head" data-tone="light" aria-labelledby="page-title">
 <div class="wrap">
-<p class="eyebrow">Updated October 20, 2026</p>
+<p class="eyebrow">Updated October 28, 2026</p>
 <h1 class="display-xl page-title" id="page-title">Privacy</h1>
 <p class="lead">What Slicio stores, who can see it, and how to delete it, in plain words. We’re a student team, and we update this page when anything changes.</p>
 </div>
@@ -60,7 +60,7 @@
 <section class="section legal" data-tone="white" aria-label="Privacy policy">
 <div class="wrap wrap--narrow prose">
 <h2>The short version</h2>
-<p>If you make a Slicio account, we keep your first name and email, and the things you do with the account: crusts, votes, slice ratings and taste test ratings. You can also add a last name, a phone number, a birthday month and day, and a nearest store, and none of them is needed. We never ask for a birth year. We don’t run ads, trackers or analytics on this site. We won’t sell your information.</p>
+<p>If you make a Slicio account, we keep your first name and email, and the things you do with the account: crusts, votes, slice ratings and taste test ratings. You can also add a last name, a phone number, a birthday month and day, and a nearest store, and none of them is needed. We never ask for a birth year. We don’t run ads, trackers or analytics on this site or in the app. We won’t sell your information. We keep what we store until you delete your account or ask us to, and deleting your account removes it (see <a href="#how-long">How long we keep it</a>).</p>
 
 <h2>What we store</h2>
 <p>When you sign in to the Slicio app, or on this website (the taste test page and the My Slicio page), we store:</p>
@@ -74,8 +74,8 @@
 <li><em>Your birthday month and day.</em> We never ask for the year. We use it only for the birthday slice, a free slice planned for when Slicio opens (see the <a href="../rewards-terms/">draft terms</a>), and for nothing else. Nothing uses it yet. We also keep the date you saved it, because the birthday slice needs your birthday saved 3 months ahead.</li>
 <li><em>Your nearest store or pop-up.</em> You pick it from a list the team keeps, so it tells us roughly where you are. The list is empty until Slicio has places to pick, so nothing is collected yet.</li>
 </ul></li>
-<li><strong>Your member code.</strong> A short code we make for you, so the team can find your Crust Club at the counter.</li>
-<li><strong>Your crusts.</strong> Each crust or free slice added to or spent from your account, with the date.</li>
+<li><strong>Your member code and account ID.</strong> A short code and an ID that we make for you, so the team can find your Crust Club at the counter and the app knows which account is yours.</li>
+<li><strong>Your crusts and paid slices.</strong> Each crust or free slice added to or spent from your account, and the paid slices the team records when you buy at the counter, with the date.</li>
 <li><strong>Your slice ratings.</strong> The stars you give a slice on the menu (on the Rate a slice page or in the app), whether you would order it again, and the comment you write, if any. There is one rating per slice and you can change it. Rating a slice does not earn a crust.</li>
 <li><strong>Your taste test ratings.</strong> The rating you give a test slice, whether you would buy it, and the comment you write, if any.</li>
 <li><strong>Your Slice of the Month votes.</strong> The slice you pick each month, so each member counts once a month.</li>
@@ -86,6 +86,12 @@
 
 <h2>How you sign in</h2>
 <p>You sign in with Apple or Google, with an email and a password, or with an email code where we have switched that on, in the app and on this website. Slicio never sees a password: Supabase keeps only a scrambled version of it. We don’t send an email to check that an address is yours when you make an account. A forgotten password can’t be reset by email yet. When you ask for an email code, we send it from the team’s Gmail address, so Google handles that email too. The database and the sign-in service are run for us by Supabase, which hosts them. Apple and Google follow their own privacy rules for the sign-in step. Through Apple on the website, Apple does not share your name, so My Slicio asks what to call you.</p>
+
+<h2>What Apple and Google share when you sign in</h2>
+<p>Apple and Google send us only the name and email that you allow them to share, and a sign-in token that proves it is you. We use that token to sign you in. If you sign in with Apple in the app, we also keep a token that Apple gives us. It sits in a table that the app and this website cannot read, and we use it only to ask Apple to disconnect Slicio when you delete your account. Deleting your account deletes the token. If you use Google sign-in in the app, Google’s sign-in tool may use your device’s IP address and a device check to prevent fraud, and Google handles that under its own privacy terms. When you delete your account, the app also asks Google to disconnect Slicio. You can remove Slicio yourself at any time in your Apple Account settings (Sign in with Apple) or your Google Account settings.</p>
+
+<h2>App updates</h2>
+<p>The app gets fixes through Expo’s update service. When the app starts, it asks Expo (<code>u.expo.dev</code>) whether there is a newer copy of the app’s code for the version you have installed. That request shows Expo your device’s IP address and the app version. The app sends Expo no account details. Expo handles the request under its own privacy terms.</p>
 
 <h2>The taste test page, the Rate a slice page and My Slicio</h2>
 <p>The taste test page (the one a pizza card’s QR code opens) and the <a href="../account/">My Slicio</a> page run in your browser. The taste test page asks our database for the pizza’s name and, if you rate the slice, saves your rating there. The Rate a slice page asks our database which slices you can rate and saves your stars, your answer and your comment there. My Slicio asks our database for your own name, optional details, member code, crusts and ratings and shows them to you only, after you sign in. It also lets you change your details. When you tap Continue with Apple or Continue with Google, they send you to Apple or Google to sign in and bring you back. To keep you signed in, they save your sign-in in your browser’s local storage on your own device. They also save your answer to “I am 13 or older” there, and that answer is never sent to us. They don’t set cookies. Sign out clears the sign-in. Clear this site’s data in your browser settings to clear the age answer.</p>
@@ -102,20 +108,24 @@
 
 <h2>Who can see it</h2>
 <p>The Slicio team can see your account and what you did with it. Your slice and taste test comments are seen only by the Slicio team. The results screens show each pizza’s numbers and comments without names, but our database does record which account gave which rating. Once at least 5 members have rated a slice, a member who has rated it can see its average, and no one sees anyone else’s comment. Supabase hosts that database for us. We’ll name the service that stores any site form before that form opens.</p>
+<p>Apart from the team, the services that handle your information are Supabase (our database and sign-in service), Apple and Google (when you sign in with them, and Google also for email we send from the team’s Gmail address) and Expo (app updates). Each of them handles it under its own privacy terms, which we rely on to give it the same protection we describe on this page. We don’t sell it or share it for ads.</p>
 
 <h2>Ages</h2>
 <p>A tasting table is the one place where nobody signs up, so nobody is asked to confirm an age there: a taster of any age can tap stars and may type a comment, and the ratings are not tied to a person or an account.</p>
 <p>The Slicio Crust Club, the taste test page and the waitlist are for ages 13 and up. The taste test page asks you to check a box that says you are 13 or older. If you are under 13, please don’t send us anything. If we learn that we collected information from someone under 13, we’ll delete it.</p>
+
+<h2 id="how-long">How long we keep it</h2>
+<p>We keep your information until you delete your account or ask us to delete it. We don’t delete accounts, ratings or votes automatically after a set time. When your account is deleted, your votes, slice ratings, taste test ratings and comments, crusts and the rest of the account’s records are deleted with it, not kept in a form without your name. The one exception is a rating made at a tasting table: it has no account on it, so it stays (see Tasting tables above).</p>
 
 <h2>Delete your account</h2>
 <ul>
 <li><strong>In the app:</strong> Account, then Delete account.</li>
 <li><strong>On the web:</strong> sign in on My Slicio or the taste test page, then use Delete my account at the bottom of the page. The page asks you to confirm before it deletes anything.</li>
 </ul>
-<p>Deleting removes your name, email, optional details, member code, crusts, votes, slice ratings, taste test ratings and comments, requests you sent from the app, and the sign-in record. It can’t be undone. If you signed in with Apple in the app, deleting also asks Apple to disconnect Slicio. If you signed in with Apple or Google on the website, it doesn’t remove Slicio from the list of connected apps in your Apple or Google account. If you want it gone from that list, remove Slicio in your Apple or Google account settings too.</p>
+<p>Deleting removes your name, email, optional details, member code, crusts, votes, slice ratings, taste test ratings and comments, requests you sent from the app, the Apple token described above if we kept one, and the sign-in record. It can’t be undone. If you signed in with Apple in the app, deleting also asks Apple to disconnect Slicio. If you signed in with Apple or Google on the website, it doesn’t remove Slicio from the list of connected apps in your Apple or Google account. If you want it gone from that list, remove Slicio in your Apple or Google account settings too.</p>
 
 <h2>Contact</h2>
-<p>Questions, or something that doesn’t work? Email <a href="mailto:sliciopizza@gmail.com">sliciopizza@gmail.com</a>. If you can’t use the delete options above, email us and ask us to delete your account.</p>
+<p>Questions, or something that doesn’t work? Email <a href="mailto:sliciopizza@gmail.com">sliciopizza@gmail.com</a>. If you can’t use the delete options above, email us and ask us to delete your account. To take back your consent to what we store, delete your account or email us.</p>
 
 <p><a href="../rewards-terms/">Crust Club draft terms</a></p>
 </div>
