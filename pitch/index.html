@@ -289,14 +289,15 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 /* ---------- 1 team ---------- */
 .team-top{display:flex;justify-content:space-between;align-items:flex-end}
 .team-top>div{flex:none;white-space:nowrap}
-.team-top h2{font-size:140px}
-.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 44px;margin-top:34px}
-.pcard{display:grid;grid-template-columns:224px 1fr;gap:36px;align-items:center}
-.pcard .portrait{width:224px;height:280px}
+
+.team-top h2{font-size:104px;line-height:.95}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 44px;margin-top:22px}
+.pcard{display:grid;grid-template-columns:168px 1fr;gap:28px;align-items:center}
+.pcard .portrait{width:168px;height:210px}
 .pcard .offset::after{transform:translate(14px,14px)}
-.pcard h3{font-size:60px;line-height:.92;margin:10px 0 8px}
+.pcard h3{font-size:56px;line-height:.92;margin:8px 0 6px}
 .pcard .role{font-size:30px;padding:6px 22px}
-.pcard .strength{font-size:32px;font-weight:700;line-height:1.2}
+.pcard .strength{font-size:30px;font-weight:700;line-height:1.2}
 
 /* ---------- 2 problem ---------- */
 .pr-left{left:var(--side);top:var(--top);width:820px}
@@ -501,21 +502,6 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 .nums3 b{display:block;font-size:96px;line-height:.9;color:var(--honey)}
 .appbadge.sm{font-size:30px;padding:8px 24px;margin-left:14px;vertical-align:middle;white-space:nowrap}
 
-/* ---------- 20 canvas ---------- */
-#s-canvas{padding:156px 44px 130px}
-.cv-title{position:absolute;left:0;right:0;top:72px;text-align:center;font-size:90px;line-height:1;z-index:5}
-.cv{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr 196px;height:100%;border:4px solid var(--charcoal);background:#fff;color:var(--charcoal)}
-.cv section{border:2px solid var(--charcoal);padding:12px 16px 10px;overflow:hidden;position:relative;background:#fff;transition:background .35s,box-shadow .35s}
-.cv section.on{background:#fff2f2;box-shadow:inset 0 0 0 8px var(--red);z-index:2}
-.cv h3{display:flex;align-items:center;gap:12px;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:40px;line-height:.92;margin-bottom:8px}
-.cv h3 i{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--charcoal);color:#fff;font-family:var(--body);font-style:normal;font-weight:900;font-size:28px}
-.cv ul{display:flex;flex-direction:column;gap:8px}
-.cv li{position:relative;padding-left:24px;font-size:28px;line-height:1.12;font-weight:600;color:var(--charcoal)}
-.cv li::before{content:"";position:absolute;left:0;top:.42em;width:12px;height:12px;border-radius:50%;background:var(--red)}
-.cb1{grid-column:1/3;grid-row:1/3}.cb4{grid-column:3/5;grid-row:1}.cb9{grid-column:3/5;grid-row:2}
-.cb3{grid-column:5/7;grid-row:1/3}.cb8{grid-column:7/9;grid-row:1}.cb5{grid-column:7/9;grid-row:2}
-.cb2{grid-column:9/11;grid-row:1/3}.cb7{grid-column:1/6;grid-row:3}.cb6{grid-column:6/11;grid-row:3}
-
 /* ---------- 21 ask ---------- */
 .fa-left{left:var(--side);top:var(--top);width:1040px}
 .fa-left h2{font-size:320px;line-height:.82;margin:62px 0 20px}
@@ -617,15 +603,6 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 .slide.auto .chart .area{transition:opacity .6s 1.3s}
 .slide.auto .chart .low{transition:opacity .5s 1.4s}
 .slide.auto .chart .oct{transition:opacity .5s 1.4s}
-.slide.active.auto .cv section{animation:cvIn .5s var(--ease) backwards}
-.slide.active.auto .cv section:nth-child(1){animation-delay:.1s}.slide.active.auto .cv section:nth-child(2){animation-delay:.18s}
-.slide.active.auto .cv section:nth-child(3){animation-delay:.26s}.slide.active.auto .cv section:nth-child(4){animation-delay:.34s}
-.slide.active.auto .cv section:nth-child(5){animation-delay:.42s}.slide.active.auto .cv section:nth-child(6){animation-delay:.5s}
-.slide.active.auto .cv section:nth-child(7){animation-delay:.58s}.slide.active.auto .cv section:nth-child(8){animation-delay:.66s}
-.slide.active.auto .cv section:nth-child(9){animation-delay:.74s}
-@keyframes cvIn{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
-.reduce .slide.active.auto .cv section{animation:none}
-
 /* ---------- product carousel (slide "The product"): thumbnails along the bottom, one rises, grows, holds, goes back ---------- */
 .cs-text{left:var(--side);top:200px;width:540px}
 .cs-text h2{font-size:132px;line-height:.88}
@@ -647,6 +624,121 @@ body.notes-mode #notes-ui{display:grid;grid-template-columns:minmax(0,1.7fr) min
 html.pdf .cs-item{opacity:1!important;transition:none!important;transform:translate(var(--gx,0px),var(--gy,0px)) scale(.318)!important}
 html.pdf .cs-cap{opacity:1!important;font-size:66px;left:28px;bottom:28px;padding:8px 26px;transition:none}
 html.pdf .carousel{top:236px}
+
+/* ---------- Unit 1 shareback re-cut ---------- */
+.we-are{left:var(--side);right:var(--side);bottom:var(--bot);background:var(--red);border-radius:26px;text-align:center;padding:4px 0 10px}
+.we-are h2{font-size:136px;line-height:.95;color:#fff}
+/* problem: how we learned it */
+.src-row{left:var(--side);right:var(--side);top:350px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.src{background:var(--card);border-radius:22px;border-top:12px solid var(--red);padding:22px 26px 28px;min-height:520px}
+.src .num{font-weight:900;font-size:30px;letter-spacing:.14em;color:var(--honey)}
+.src .lab{font-size:28px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:6px 0 10px;min-height:68px;line-height:1.2}
+.src b{display:block;font-size:96px;line-height:.92;color:var(--honey);margin-bottom:18px}
+.src b i{font-style:normal}
+.src p.t-m{font-size:34px}
+/* customer segments */
+.sg-left{left:var(--side);top:var(--top);width:700px}
+.sg-left h2{font-size:130px}
+.sg-num{margin-top:12px}
+.sg-num b{display:block;font-size:164px;line-height:.9}
+.sg-num p{margin-top:2px}
+.sg-left .chips{flex-direction:column;align-items:flex-start;margin-top:14px}
+.sg-left .chips .pill{font-size:32px;padding:10px 28px}
+.sg-map{left:900px;right:var(--side);top:var(--top);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sg-map .map-t{grid-column:1/3;margin-bottom:2px}
+.cell{background:var(--card);border-radius:20px;border-left:10px solid var(--red);padding:14px 22px 18px}
+.cell .lab{font-size:28px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--honey);line-height:1.2}
+.cell p:not(.lab){font-size:32px;line-height:1.2;margin-top:6px;font-weight:700}
+/* solution: our first idea */
+.idea-lede{left:var(--side);top:330px}
+.board{left:var(--side);right:var(--side);top:410px;display:flex;gap:30px;align-items:stretch}
+.bgrp{background:var(--card);border-radius:24px;padding:16px 28px 20px}
+.bgrp:first-child{flex:none}
+.bgrp:last-child{flex:1}
+.bt{font-size:28px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--honey);margin-bottom:10px}
+.bsl{display:flex;gap:26px}
+.bsl figure{margin:0;width:200px;text-align:center}
+.bsl img{height:210px;width:auto;margin:0 auto 6px}
+.bsl figcaption{font-size:30px;font-weight:800;line-height:1.15}
+.idea-chips{left:var(--side);top:864px}
+.idea-chips .pill{font-size:40px;padding:14px 38px}
+.ap-points{margin:6px 0 20px}
+.ap-points li{font-size:36px;font-weight:800;line-height:1.2;margin-bottom:8px}
+/* three questions */
+.q-list{left:var(--side);top:320px;width:1120px;display:flex;flex-direction:column;gap:18px}
+.q-list li{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;background:#fff;border-radius:22px;border-left:12px solid var(--red);padding:14px 26px;box-shadow:0 10px 30px rgba(28,26,25,.14)}
+.q-list b{font-size:110px;line-height:.9;color:var(--red)}
+.q-list p{font-size:38px;font-weight:700;line-height:1.18}
+.q-how{right:var(--side);top:320px;width:520px;background:var(--charcoal);color:var(--flour);border-radius:24px;padding:24px 30px 26px}
+.slide[data-tone="flour"] .q-how .kicker{color:var(--honey);display:block}
+.slide[data-tone="flour"] .q-how .kicker::before{display:none}
+.q-how ul{margin-top:12px}
+.q-how li{font-size:32px;font-weight:700;line-height:1.2;padding:9px 0 9px 28px;border-top:3px solid rgba(250,247,242,.18);position:relative}
+.q-how li::before{content:"";position:absolute;left:0;top:19px;width:14px;height:14px;border-radius:50%;background:var(--honey)}
+/* competition */
+.cmp{left:var(--side);right:var(--side);top:330px}
+.cr{display:grid;grid-template-columns:230px repeat(4,1fr);gap:10px;margin-bottom:10px}
+.cr>span{display:flex;align-items:center;font-size:28px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--honey);line-height:1.15}
+.cr>p{background:var(--card);border-radius:16px;padding:12px 18px;font-size:34px;font-weight:700;line-height:1.15;display:flex;align-items:center;min-height:120px}
+.cr>p.us{background:var(--flour);color:var(--charcoal);font-weight:900}
+.cr.ch>p{flex-direction:column;align-items:flex-start;justify-content:center;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:50px;line-height:.95;min-height:100px;background:transparent;padding:0 8px}
+.cr.ch>p small{display:block;font-family:var(--body);font-size:28px;font-weight:800;letter-spacing:.1em;color:var(--honey);margin-top:6px}
+.cr.ch>p.us{color:var(--flour);background:transparent}
+.cr.ch>p.us small{color:#ff8f91}
+.facts{left:var(--side);right:var(--side);top:330px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fact{background:#fff;border-radius:24px;border-top:14px solid var(--red);padding:22px 30px 28px;min-height:520px;box-shadow:0 10px 30px rgba(28,26,25,.14)}
+.fact b{display:block;font-size:150px;line-height:.9;color:#a30d10;margin-bottom:16px}
+.fact b i{font-style:normal}
+.fact:nth-child(3) b{font-size:80px;line-height:1;margin-bottom:22px}
+.fact b em{display:block;font-style:normal;font-size:44px;color:var(--charcoal);line-height:1.1}
+.fact p.t-l{font-size:40px;font-weight:800;margin-bottom:12px}
+.fact p.t-s{color:var(--charcoal-2);font-size:32px}
+/* unique value proposition */
+.uvp-h{font-size:112px;line-height:.95;margin-top:10px;max-width:1700px}
+.uvp-sub{margin-top:24px;max-width:1520px;font-size:42px;line-height:1.25;background:var(--flour);color:var(--charcoal);border-radius:22px;padding:16px 28px}
+.uvp-ben{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.uvp-ben article{background:var(--charcoal);color:var(--flour);border-radius:22px;padding:18px 28px 22px}
+.uvp-ben b{display:block;font-size:62px;line-height:.95;color:var(--honey);margin-bottom:8px}
+.uvp-ben p{font-size:34px}
+/* BMC canvases */
+#s-bmc1,#s-bmc2{padding:0}
+.cv-title{position:absolute;left:0;right:0;top:67px;text-align:center;font-size:64px;line-height:1;z-index:5}
+.cv{position:absolute;left:44px;right:44px;top:134px;height:782px;display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr 186px;border:4px solid var(--charcoal);background:#fff;color:var(--charcoal)}
+.cv section{border:2px solid var(--charcoal);padding:10px 14px 8px;overflow:hidden;position:relative;background:#fff;transition:opacity .35s,box-shadow .35s,background .35s}
+.cv h3{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:38px;line-height:.92;margin-bottom:6px}
+.cv h3 i{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--charcoal);color:#fff;font-family:var(--body);font-style:normal;font-weight:900;font-size:26px}
+.cv ul{display:flex;flex-direction:column;gap:6px}
+.cv li{position:relative;padding:2px 6px 2px 22px;font-size:26px;line-height:1.12;font-weight:600;color:var(--charcoal);border-radius:8px}
+.cv li::before{content:"";position:absolute;left:5px;top:.5em;width:11px;height:11px;border-radius:50%;background:var(--red)}
+.cb1{grid-column:1/3;grid-row:1/3}.cb4{grid-column:3/5;grid-row:1}.cb9{grid-column:3/5;grid-row:2}
+.cb3{grid-column:5/7;grid-row:1/3}.cb8{grid-column:7/9;grid-row:1}.cb5{grid-column:7/9;grid-row:2}
+.cb2{grid-column:9/11;grid-row:1/3}.cb7{grid-column:1/6;grid-row:3}.cb6{grid-column:6/11;grid-row:3}
+.cv-now.focusing section:not(.on){opacity:.4}
+.cv-now section.on{background:#fff6f6;box-shadow:inset 0 0 0 7px var(--red);z-index:2}
+.cv-now li.m-honey::before{background:#b87f00}.cv-now li.m-blue::before{background:#1f5fbf}.cv-now li.m-green::before{background:var(--basil)}
+.cv-now section.seen li.m-honey{background:rgba(242,169,0,.5)}
+.cv-now section.seen li.m-blue{background:rgba(52,110,220,.26)}
+.cv-now section.seen li.m-red{background:rgba(224,22,25,.2)}
+.cv-now section.seen li.m-green{background:rgba(47,125,50,.28)}
+.cv-title .m{border-radius:12px;padding:0 14px}
+.cv-title .red{color:#a30d10}
+.cv-title .m-honey{background:transparent;transition:background .4s}
+.named .cv-title .m-honey{background:rgba(242,169,0,.55)}
+.bmc-legend{left:44px;right:44px;top:924px;display:grid;grid-template-columns:auto auto;gap:8px 16px;justify-content:center;justify-items:start}
+.bmc-legend li{white-space:nowrap;font-size:28px;font-weight:800;line-height:1.1;padding:5px 20px;border-radius:999px;color:var(--charcoal)}
+.bmc-legend .m-honey{background:rgba(242,169,0,.6)}.bmc-legend .m-blue{background:rgba(52,110,220,.3)}.bmc-legend .m-red{background:rgba(224,22,25,.24)}.bmc-legend .m-green{background:rgba(47,125,50,.32)}
+/* next steps */
+.steps-list{left:var(--side);right:var(--side);top:310px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.steps-list li{display:grid;grid-template-columns:110px 1fr;gap:10px;background:var(--card);border-radius:22px;border-top:12px solid var(--red);padding:12px 26px 22px}
+.steps-list b{font-size:130px;line-height:.9;color:var(--honey)}
+.steps-list h3{font-size:50px;font-weight:800;line-height:1.1;margin:8px 0 10px}
+.steps-list p{font-size:35px;line-height:1.22;color:var(--soft);font-weight:600}
+/* numbers and ask */
+.be-pill{left:var(--side);bottom:var(--bot);font-size:34px}
+.fa-left{width:1100px}
+.fa-social{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}
+.fa-social .pill{font-size:34px;padding:10px 28px}
+.th-main .t-m{margin-top:10px}
 
 /* ---------- reader mode: portrait phones and small portrait tablets (set by deck.js, body.reader) ---------- */
 html.reader-on,html.reader-on body{overflow:auto;height:auto;background:var(--charcoal)}
@@ -874,6 +966,70 @@ body.reader .cs-item{position:relative!important;width:100%!important;height:aut
 body.reader .cs-item img{width:100%;height:auto;aspect-ratio:16/10;border-radius:14px;background:#efe9dd;box-shadow:0 8px 22px rgba(28,26,25,.2)}
 body.reader .cs-item.contain img{padding:12px;box-sizing:border-box}
 body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important;line-height:1.25;background:none;padding:0 2px;transition:none;color:var(--charcoal);font-weight:700}
+
+/* Unit 1 shareback slides */
+body.reader .we-are{position:static!important;margin-top:18px;padding:4px 0 10px}
+body.reader .we-are h2{font-size:clamp(52px,16vw,96px)!important}
+body.reader .src-row,body.reader .facts,body.reader .uvp-ben{display:grid!important;grid-template-columns:1fr;gap:12px;margin-top:16px}
+body.reader .src{min-height:0;padding:14px 18px 18px}
+body.reader .src .lab{min-height:0;margin:2px 0 6px}
+body.reader .src b{font-size:clamp(46px,14vw,72px)!important}
+body.reader .src p.t-m{font-size:clamp(17px,4.6vw,22px)!important}
+body.reader .sg-left h2{font-size:clamp(56px,16vw,96px)!important}
+body.reader .sg-num b{font-size:clamp(70px,22vw,120px)!important}
+body.reader .sg-map{display:grid!important;grid-template-columns:1fr;gap:10px;margin-top:18px}
+body.reader .sg-map .map-t{grid-column:auto}
+body.reader .cell p:not(.lab){font-size:clamp(17px,4.6vw,22px)!important}
+body.reader .cell .lab{font-size:16px!important}
+body.reader .board{display:flex!important;flex-direction:column;gap:12px;margin-top:14px}
+body.reader .bsl{flex-wrap:wrap;gap:10px}
+body.reader .bsl figure{width:22%;min-width:70px}
+body.reader .bsl img{height:auto;width:100%}
+body.reader .bsl figcaption{font-size:16px!important}
+body.reader .bt{font-size:16px!important}
+body.reader .idea-lede{margin-top:6px}
+body.reader .idea-chips{display:flex!important;flex-wrap:wrap}
+body.reader .idea-chips .pill{font-size:clamp(16px,4.4vw,21px)!important;padding:8px 18px!important}
+body.reader .q-list{display:flex!important;flex-direction:column;gap:10px;margin-top:14px}
+body.reader .q-list li{grid-template-columns:44px 1fr;padding:10px 14px}
+body.reader .q-list b{font-size:56px!important}
+body.reader .q-list p{font-size:clamp(17px,4.6vw,22px)!important}
+body.reader .q-how{margin-top:14px;padding:16px 18px}
+body.reader .q-how li{font-size:clamp(17px,4.6vw,22px)!important}
+body.reader .cmp{margin-top:14px}
+body.reader .cr{grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
+body.reader .cr>span{grid-column:1/3;font-size:16px!important;margin-top:6px}
+body.reader .cr.ch{display:none}
+body.reader .cr>p{font-size:clamp(16px,4.2vw,20px)!important;min-height:0;padding:8px 12px;flex-direction:column;align-items:flex-start}
+body.reader .cr:not(.ch)>p::before{display:block;font-size:14px;font-weight:800;letter-spacing:.08em;color:var(--honey);text-transform:uppercase;margin-bottom:2px}
+body.reader .cr:not(.ch)>p:nth-of-type(1)::before{content:"Pop's Pizza"}
+body.reader .cr:not(.ch)>p:nth-of-type(2)::before{content:"Domino's"}
+body.reader .cr:not(.ch)>p:nth-of-type(3)::before{content:"Crumbl Cookies"}
+body.reader .cr:not(.ch)>p.us::before{content:"Slicio";color:var(--red)}
+body.reader .fact{min-height:0;padding:14px 18px 18px}
+body.reader .fact b{font-size:clamp(60px,18vw,96px)!important}
+body.reader .fact:nth-child(3) b{font-size:clamp(34px,10vw,54px)!important}
+body.reader .fact p.t-l{font-size:clamp(20px,5.4vw,26px)!important}
+body.reader .uvp-h{font-size:clamp(40px,11.4vw,76px)!important;line-height:1}
+body.reader .uvp-sub{font-size:clamp(18px,5vw,24px)!important}
+body.reader .uvp-ben b{font-size:clamp(30px,9vw,44px)!important}
+body.reader .cv-title{position:static;font-size:clamp(40px,12vw,64px)!important}
+body.reader .cv-title .m-honey{background:rgba(242,169,0,.55)}
+body.reader .cv{position:static;height:auto}
+body.reader .cv-now section{opacity:1!important;box-shadow:none}
+body.reader .cv-now section li.m-honey{background:rgba(242,169,0,.5)}body.reader .cv-now section li.m-blue{background:rgba(52,110,220,.26)}body.reader .cv-now section li.m-red{background:rgba(224,22,25,.2)}body.reader .cv-now section li.m-green{background:rgba(47,125,50,.28)}
+body.reader .bmc-legend{position:static;display:flex!important;flex-wrap:wrap;margin-top:12px;gap:8px}
+body.reader .bmc-legend li{font-size:16px!important;padding:4px 12px}
+body.reader .cv li{font-size:17px!important}
+body.reader .steps-list{display:grid!important;grid-template-columns:1fr;gap:10px;margin-top:14px}
+body.reader .steps-list li{grid-template-columns:48px 1fr;padding:8px 14px 12px}
+body.reader .steps-list b{font-size:60px!important}
+body.reader .steps-list h3{font-size:clamp(22px,6vw,28px)!important}
+body.reader .steps-list p{font-size:clamp(16px,4.4vw,20px)!important}
+body.reader .be-pill{display:inline-block;margin-top:12px}
+body.reader .fa-social{display:flex;flex-wrap:wrap}
+body.reader .fa-social .pill{font-size:clamp(16px,4.4vw,21px)!important;padding:8px 18px!important}
+body.reader .ap-points li{font-size:clamp(20px,5.4vw,26px)!important}
 </style>
 </head>
 <body class="mode-intro">
@@ -932,9 +1088,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <div class="skip">Any key skips</div>
   </div>
 
-
-<!-- ===================== P1 THE HOOK ===================== -->
-<section class="slide" id="s-problem" data-title="Intro: the hook" data-tone="dark" data-time="10" data-steps="3" data-who="Intro">
+<section class="slide" id="s-problem" data-title="Intro: the hook" data-tone="dark" data-time="10" data-steps="3" data-who="Team intro and elevator pitch">
   <div class="pos pr-left">
     <p class="kicker rv">The problem</p>
     <h2 class="disp rv" style="--d:.1s">Think about the last slice you <span class="honey">bought.</span></h2>
@@ -952,8 +1106,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="3">And it was gone in four bites.</p>
   </aside>
 </section>
-<!-- ===================== P2 THE SAME MENU VS SLICIO ===================== -->
-<section class="slide" id="s-vs" data-title="Intro: the same menu vs Slicio" data-tone="dark" data-time="14" data-steps="1" data-who="Intro">
+<section class="slide" id="s-vs" data-title="Intro: the same menu vs Slicio" data-tone="dark" data-time="14" data-steps="1" data-who="Team intro and elevator pitch">
   <div class="pos gs-text">
     <p class="pill honey rv namechip">Logan Holby, Founder and CEO</p>
     <div class="vsi them rv" style="--d:.15s"><p class="kicker">Most pizza places</p><p class="disp">The same menu, every time.</p></div>
@@ -968,8 +1121,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="1">We don't. Every Sunday night, we reveal three new giant slices, each one a quarter of a 16-inch pie.</p>
   </aside>
 </section>
-<!-- ===================== P3 THE COOKBOOK AND THE OVEN ===================== -->
-<section class="slide" id="s-oven" data-title="Intro: 150 recipes and the oven" data-tone="dark" data-time="10" data-steps="2" data-who="Intro">
+<section class="slide" id="s-oven" data-title="Intro: 150 recipes and the oven" data-tone="dark" data-time="10" data-steps="2" data-who="Team intro and elevator pitch">
   <div class="pos ov-left">
     <div class="gauge rv z" style="--d:.15s">
       <svg viewBox="0 0 760 760" aria-hidden="true">
@@ -992,8 +1144,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="2">all tested in a 950-degree stone oven.</p>
   </aside>
 </section>
-<!-- ===================== P4 STARTING IN MUNDELEIN ===================== -->
-<section class="slide" id="s-start" data-title="Intro: starting in Mundelein" data-tone="dark" data-time="8" data-steps="1" data-who="Intro">
+<section class="slide" id="s-start" data-title="Intro: starting in Mundelein" data-tone="dark" data-time="8" data-steps="1" data-who="Team intro and elevator pitch">
   <p class="kicker rv">Right here</p>
   <h2 class="disp h-xl rv" style="--d:.1s">Starting in <span class="honey">Mundelein.</span></h2>
   <ul class="pos st-chips rv" style="--d:.4s"><li class="pill honey">Students</li><li class="pill honey">Families</li><li class="pill honey">Teams</li></ul>
@@ -1006,8 +1157,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="1">Try one slice, and you'll want to see what next Sunday brings.</p>
   </aside>
 </section>
-<!-- ===================== P5 THE CLOSE ===================== -->
-<section class="slide" id="s-intro-close" data-title="Intro: close" data-tone="dark" data-time="10" data-steps="2" data-who="Intro">
+<section class="slide" id="s-intro-close" data-title="Intro: close" data-tone="dark" data-time="10" data-steps="2" data-who="Team intro and elevator pitch">
   <p class="kicker rv">Today, the team shows you</p>
   <ul class="ic-row rv" style="--d:.15s"><li class="pill honey">How we make it</li><li class="pill honey">How we sell it</li><li class="pill honey">How it makes money</li></ul>
   <div class="pos ic-name at1">
@@ -1024,14 +1174,13 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="2">Let It Crust.</p>
   </aside>
 </section>
-<!-- ===================== 1 THE TEAM ===================== -->
-<section class="slide" id="s-team" data-title="Meet the team" data-tone="dark" data-time="20" data-steps="0" data-who="Meet the team">
+<section class="slide" id="s-team" data-title="Meet the team" data-tone="dark" data-time="20" data-steps="0" data-who="Team intro and elevator pitch">
   <div class="team-top">
     <div>
       <p class="kicker rv">Meet the team</p>
-      <h2 class="disp rv" style="--d:.1s">We are <span class="red">Slicio.</span></h2>
+      <h2 class="disp rv" style="--d:.1s">Four students. <span class="honey">Four roles.</span></h2>
     </div>
-    <p class="t-l soft rv r" style="--d:.25s;text-align:right">Four Mundelein High School students.<br>incubatorEDU, 2026.</p>
+    <p class="t-l soft rv r" style="--d:.25s;text-align:right">Mundelein High School<br>incubatorEDU, 2026</p>
   </div>
   <ul class="team-grid">
     <li class="pcard rv" style="--d:.3s"><div class="portrait offset"><img src="assets/team/logan.webp" alt="Logan Holby"></div><div><p class="pill honey role">CEO</p><h3 class="disp">Logan Holby</h3><p class="strength">Started two companies</p></div></li>
@@ -1039,15 +1188,72 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <li class="pcard rv" style="--d:.6s"><div class="portrait offset"><img src="assets/team/nino.webp" alt="Nino Maniscalco"></div><div><p class="pill honey role">CMO</p><h3 class="disp">Nino Maniscalco</h3><p class="strength">The cooking and the marketing</p></div></li>
     <li class="pcard rv" style="--d:.75s"><div class="portrait offset"><img src="assets/team/connor.webp" alt="Connor Russell"></div><div><p class="pill honey role">CFO</p><h3 class="disp">Connor Russell</h3><p class="strength">Every price covers its costs</p></div></li>
   </ul>
+  <div class="pos we-are rv z" style="--d:1.7s"><h2 class="disp">We are Slicio.</h2></div>
   <aside class="notes">
-    <p data-s="0">Four Mundelein High School students in the incubatorEDU class.</p>
-    <p data-s="0">CEO started two companies. COO runs operations: the weekly schedule and the custom boxes.</p>
-    <p data-s="0">CMO does the cooking and the marketing. CFO makes every price cover its costs.</p>
+    <p data-s="0">Each member introduces themself and their role: CEO Logan Holby (started two companies), COO Christian Saucedo (operations: the weekly schedule and the custom boxes), CMO Nino Maniscalco (the cooking and the marketing), CFO Connor Russell (every price covers its costs).</p>
+    <p data-s="0">Then all four together: "We are Slicio."</p>
   </aside>
 </section>
-
-<!-- ===================== 4 WHAT GOES IN ===================== -->
-<section class="slide" id="s-ing" data-title="What goes in matters" data-tone="dark" data-time="18" data-steps="0" data-who="The product">
+<section class="slide" id="s-how" data-title="Problem: how we learned it" data-tone="dark" data-time="22" data-steps="0" data-who="Problem">
+  <p class="kicker rv">Problem</p>
+  <h2 class="disp h-l rv" style="--d:.1s">How we <span class="honey">learned it.</span></h2>
+  <div class="pos src-row">
+    <article class="src at1"><span class="num">01</span><p class="lab">Our own experience</p><b class="disp">After practice</b><p class="t-m">One slice? Mostly whole pies, $20 or more.</p></article>
+    <article class="src at2"><span class="num">02</span><p class="lab">Customer problem statements</p><b class="disp"><i data-counter="3">3</i> problems</b><p class="t-m">Whole pies and long waits. Same menu, heat lamps. No rewards.</p></article>
+    <article class="src at3"><span class="num">03</span><p class="lab">Googling like a customer</p><b class="disp"><i data-counter="1">1</i> slice shop</b><p class="t-m">Pop's Pizza is the only one in Mundelein.</p></article>
+    <article class="src at4"><span class="num">04</span><p class="lab">A price scan</p><b class="disp"><i data-counter="223">223</i> menus</b><p class="t-m">46 list a cheese slice. Median $5.05.</p></article>
+  </div>
+  <aside class="notes">
+    <p>Our own experience: hungry after practice, a game or school, and most places nearby only sell whole pizzas.</p>
+    <p>Customer problem statements (Ch 1.3): whole pies cost $20 or more and take 30 to 45 minutes; the same menu for years and slices under a heat lamp; no app or rewards.</p>
+    <p>Google like a customer: Pop's Pizza (1130 W Maple Ave) is the only shop in Mundelein that sells slices (cheese $4.50, slice and soda $6.00).</p>
+    <p>Online menu price scan: 223 menus read, 46 list a cheese slice, median cheese slice $5.05.</p>
+  </aside>
+</section>
+<section class="slide" id="s-seg" data-title="Customer segments" data-tone="dark" data-time="26" data-steps="0" data-who="Customer segments">
+  <div class="pos sg-left">
+    <p class="kicker rv">Customer segments</p>
+    <h2 class="disp h-l rv" style="--d:.1s">Who has <span class="honey">it.</span></h2>
+    <div class="sg-num at1"><b class="disp honey" data-counter="2100" data-suffix="+">2,100+</b><p class="t-l">students at Mundelein High School</p></div>
+    <div class="sg-num at2"><b class="disp" data-counter="11000" data-suffix="+">11,000+</b><p class="t-l">households in Mundelein</p></div>
+    <ul class="chips at3"><li class="pill honey">Teams, clubs and offices</li><li class="pill honey">Early followers</li></ul>
+  </div>
+  <div class="pos sg-map">
+    <p class="map-t kicker rv">What we know about them</p>
+    <div class="cell at1"><p class="lab">Think and feel</p><p>Same meals get boring. They want new flavors.</p></div>
+    <div class="cell at2"><p class="lab">Hear</p><p>Friends suggest new places. Weekly specials.</p></div>
+    <div class="cell at3"><p class="lab">See</p><p>The same food nearby. New foods on TikTok and Instagram.</p></div>
+    <div class="cell at4"><p class="lab">Say and do</p><p>"I want something different." They ask friends.</p></div>
+    <div class="cell at5"><p class="lab">Pains</p><p>Bored. New options cost too much. Unsure they will like it.</p></div>
+    <div class="cell at6"><p class="lab">Gains</p><p>Meals they enjoy. Affordable new flavors. New choices every week.</p></div>
+  </div>
+  <aside class="notes">
+    <p>Who has the problem: students (2,127 at Mundelein High School, 2,100+), families (11,632 households, 11,000+), teams, clubs and offices, and early followers who like a new drop every week.</p>
+    <p>Empathy map "no food variety" (Ch 1.3): think and feel, hear, see, say and do, pains, gains.</p>
+  </aside>
+</section>
+<section class="slide" id="s-idea" data-title="Solution: our first idea" data-tone="dark" data-time="22" data-steps="0" data-who="Solution">
+  <p class="kicker rv">Solution</p>
+  <h2 class="disp h-l rv" style="--d:.1s">Our first <span class="honey">idea.</span></h2>
+  <p class="pos idea-lede t-xl rv" style="--d:.2s">A giant slice: a quarter of a 16-inch pie.</p>
+  <div class="pos board">
+    <div class="bgrp at1"><p class="bt">2 that never leave</p><div class="bsl">
+      <figure><img src="assets/slices/og-pepperoni.svg" alt=""><figcaption>The OG Pepperoni</figcaption></figure>
+      <figure><img src="assets/slices/og-cheese.svg" alt=""><figcaption>The OG Cheese</figcaption></figure></div></div>
+    <div class="bgrp at2"><p class="bt">4 rotating, revealed every Sunday night</p><div class="bsl">
+      <figure><img src="assets/slices/style-neapolitan.svg" alt=""><figcaption>New</figcaption></figure>
+      <figure><img src="assets/slices/style-detroit.svg" alt=""><figcaption>New</figcaption></figure>
+      <figure><img src="assets/slices/style-grandma.svg" alt=""><figcaption>New</figcaption></figure>
+      <figure><img src="assets/slices/sotm.svg" alt=""><figcaption>Slice of the Month</figcaption></figure></div></div>
+  </div>
+  <ul class="pos chips idea-chips at3"><li class="pill honey">Crust Club app</li><li class="pill honey">Pre-order pickups</li><li class="pill honey">Pop-ups and catering</li></ul>
+  <aside class="notes">
+    <p>Initial idea: giant slices, each a quarter of a 16-inch pie, about 1.6 times a typical slice.</p>
+    <p>4 rotating slices a week (3 new plus the member-voted Slice of the Month) next to The OG Pepperoni and The OG Cheese, which never leave.</p>
+    <p>Crust Club app (6 slices earn 1 free, members vote), weekly pre-order pickups, pop-ups and catering.</p>
+  </aside>
+</section>
+<section class="slide" id="s-ing" data-title="What goes in matters" data-tone="dark" data-time="12" data-steps="0" data-who="Solution">
   <h2 class="disp h-l rv">What goes in <span class="honey">matters.</span></h2>
   <div class="ing-row">
     <article class="ing at1"><span class="num">01</span><b class="disp key">00</b><p class="t-xl">Italian flour</p></article>
@@ -1062,9 +1268,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="4">Everything else is made or bought fresh every day.</p>
   </aside>
 </section>
-
-<!-- ===================== 6 STILL HOT ===================== -->
-<section class="slide" id="s-hot" data-title="Still hot when you get it" data-tone="flour" data-time="14" data-steps="0" data-who="The product">
+<section class="slide" id="s-hot" data-title="Still hot when you get it" data-tone="flour" data-time="10" data-steps="0" data-who="Solution">
   <div class="pos hot-left">
     <p class="kicker rv">Getting it to you</p>
     <h2 class="disp h-mega red rv" style="--d:.1s">Hot.</h2>
@@ -1078,50 +1282,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="2">Pan styles and a reheat card for travel.</p>
   </aside>
 </section>
-
-<!-- ===================== 7 THE MARKET ===================== -->
-<section class="slide" id="s-market" data-title="The market" data-tone="dark" data-time="18" data-steps="0" data-who="The market">
-  <p class="kicker rv">Starting in Mundelein, Illinois</p>
-  <div class="mk-row">
-    <div class="rv" style="--d:.1s"><b class="disp honey" data-counter="2100" data-suffix="+">2,100+</b><p class="t-xl">students at<br>Mundelein High School</p></div>
-    <div class="rv" style="--d:.3s"><b class="disp" data-counter="11000" data-suffix="+">11,000+</b><p class="t-xl">households<br>in town</p></div>
-  </div>
-  <ul class="pos mk-chips at1"><li class="pill honey">Students</li><li class="pill honey">Families</li><li class="pill honey">Teams</li></ul>
-  <aside class="notes">
-    <p data-s="0">Over 2,100 students at Mundelein High School. More than 11,000 households in Mundelein, Illinois.</p>
-    <p data-s="1">Who we serve first: students, families, and teams, clubs and offices ordering for a group.</p>
-  </aside>
-</section>
-
-<!-- ===================== 8 WHY SLICIO ===================== -->
-<section class="slide" id="s-why" data-title="Why Slicio" data-tone="dark" data-time="26" data-steps="0" data-who="Why Slicio">
-  <p class="kicker rv">What makes us different</p>
-  <h2 class="disp h-l rv" style="--d:.1s">Most pizza places. <span class="honey">Slicio.</span></h2>
-  <div class="vs">
-    <div class="vs-col them">
-      <h3 class="disp rv" style="--d:.2s">Most places</h3>
-      <p class="vs-row at1"><i class="x"></i>The same menu, forever</p>
-      <p class="vs-row at2"><i class="x"></i>Slices that sit under a heat lamp</p>
-      <p class="vs-row at3"><i class="x"></i>No reason to come back this week</p>
-    </div>
-    <div class="vs-col us">
-      <h3 class="disp rv" style="--d:.3s">Slicio</h3>
-      <p class="vs-row at1"><i class="ok"></i>A new lineup every week</p>
-      <p class="vs-row at2"><i class="ok"></i>Giant slices, made fresh</p>
-      <p class="vs-row at3"><i class="ok"></i>Rewards and a monthly vote</p>
-    </div>
-  </div>
-  <p class="pos vs-foot t-s rv" style="--d:.5s">We checked local menus in Oct 2026: no giant slices, no rotating board, no rewards app near Mundelein.</p>
-  <aside class="notes">
-    <p data-s="1">Today's choices: whole pies, delivery apps and fixed-menu slice shops. Slicio: a new lineup every week.</p>
-    <p data-s="2">Slicio: giant slices made fresh, not slices that have sat under a heat lamp.</p>
-    <p data-s="3">Slicio: a rewards app (6 slices earn 1 free) and a monthly vote.</p>
-    <p data-s="3">Research 07, Oct 2026: no giant-slice seller found in Mundelein, Libertyville, Vernon Hills, Grayslake or Lake Zurich; no weekly rotating board; no local pizzeria with its own loyalty app.</p>
-  </aside>
-</section>
-
-<!-- ===================== 9 HOW WE SELL ===================== -->
-<section class="slide" id="s-sell" data-title="How we sell" data-tone="flour" data-time="22" data-steps="0" data-who="How we sell">
+<section class="slide" id="s-sell" data-title="How we sell" data-tone="flour" data-time="14" data-steps="0" data-who="Solution">
   <p class="kicker rv">How we sell, from a licensed kitchen</p>
   <h2 class="disp h-l rv" style="--d:.1s">The weekly <span class="red">rhythm.</span></h2>
   <div class="week">
@@ -1145,33 +1306,11 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="3">Catering for teams, clubs and offices (40 slice minimum).</p>
   </aside>
 </section>
-
-<!-- ===================== 10 WHY THEY COME BACK ===================== -->
-<section class="slide" id="s-back" data-title="Why they come back" data-tone="dark" data-time="20" data-steps="0" data-who="Why they come back">
-  <div class="pos bk-left">
-    <p class="kicker rv">Why they come back</p>
-    <h2 class="disp rv" style="--d:.1s">Six slices.<br><span class="honey">One free.</span></h2>
-    <div class="dots big at1" data-gen="dots" data-n="6"></div>
-  </div>
-  <div class="pos ballot at2 r">
-    <p class="kicker">Slice of the Month</p>
-    <div class="cands">
-      <img src="assets/slices/style-neapolitan.svg" alt=""><img src="assets/slices/style-detroit.svg" alt="">
-      <img src="assets/slices/style-grandma.svg" alt=""><img class="pick" src="assets/slices/sotm.svg" alt="">
-    </div>
-    <p class="disp h-s">Members vote.</p>
-  </div>
-  <aside class="notes">
-    <p data-s="1">In the app, every slice earns a crust. Six crusts earn a free slice.</p>
-    <p data-s="2">Members vote once a month on the Slice of the Month. The winner stays on the board all month.</p>
-  </aside>
-</section>
-
-<!-- ===================== 11 THE APP, THE MENU ===================== -->
-<section class="slide" id="s-app-1" data-title="The app: the menu" data-tone="dark" data-time="28" data-steps="0" data-who="The app">
+<section class="slide" id="s-app-1" data-title="The app: the menu" data-tone="dark" data-time="16" data-steps="0" data-who="Solution">
   <div class="pos ap-left">
     <p class="kicker rv">The Slicio app</p>
     <h2 class="disp h-l rv" style="--d:.1s">See it.<br><span class="red">Earn it.</span></h2>
+    <ul class="ap-points t-l rv" style="--d:.2s"><li>6 slices earn 1 free.</li><li>Members vote on the Slice of the Month.</li></ul>
     <p class="appbadge app-pending rv" style="--d:.3s"><i class="dot pulse"></i>Pending App Store review</p>
     <p class="appbadge live app-live rv" style="--d:.3s"><i class="dot"></i>Now on the App Store</p>
     <div class="qr-app app-live rv" style="--d:.4s"><img src="assets/qr/app.svg" alt="QR code for the Slicio app on the App Store"><p class="t-cap">Scan for the app</p></div>
@@ -1182,15 +1321,14 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <figure class="at2"><div class="phone"><img src="assets/app/crust-club.webp" alt="Crust Club screen"></div><figcaption class="t-m">Crust Club:<br>6 crusts = 1 free</figcaption></figure>
   </div>
   <aside class="notes">
+    <p data-s="0">6 slices earn 1 free, and members vote on the Slice of the Month.</p>
     <p data-s="0">The app shows the live menu. We can change it without an app update.</p>
     <p data-s="1">Tap a slice for its story and allergens.</p>
     <p data-s="2">Crust Club: every slice earns a crust, 6 crusts earn a free slice. This screen also has the scan button for taste test cards.</p>
     <p data-s="0">Status badge: pending App Store review, or live once Apple approves (?app=live forces it).</p>
   </aside>
 </section>
-
-<!-- ===================== 12 THE APP, TASTE TEST AND VOTE ===================== -->
-<section class="slide" id="s-app-2" data-title="The app: taste test and vote" data-tone="dark" data-time="28" data-steps="0" data-who="The app">
+<section class="slide" id="s-app-2" data-title="The app: taste test and vote" data-tone="dark" data-time="16" data-steps="0" data-who="Solution">
   <div class="pos ap-left">
     <p class="kicker rv">Taste it. Rate it.</p>
     <ol class="flow">
@@ -1217,82 +1355,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="3">Members vote once a month for the Slice of the Month.</p>
   </aside>
 </section>
-
-<!-- ===================== 13 FIRST TASTING ===================== -->
-<section class="slide" id="s-tasting" data-title="Our first tasting" data-tone="flour" data-time="28" data-steps="0" data-who="Our first tasting">
-  <p class="kicker rv">Our first tasting</p>
-  <h2 class="disp h-l rv" style="--d:.1s">Three slices. <span class="red">One vote.</span></h2>
-  <div class="ts-row">
-    <article class="ts at1"><img src="assets/slices/og-cheese.svg" alt=""><h3 class="disp h-s">The OG Cheese</h3><p class="t-m">Red sauce and whole-milk mozzarella, nothing else</p></article>
-    <article class="ts at2"><img src="assets/slices/buffalo-chicken.svg" alt=""><h3 class="disp h-s">Buffalo Chicken</h3><p class="t-m">Buffalo base, chicken, mozzarella, ranch</p></article>
-    <article class="ts at3"><img src="assets/slices/nutella.svg" alt=""><h3 class="disp h-s">Nutella</h3><p class="t-m">Our dessert slice: Nutella on our crust</p></article>
-    <aside class="ts-card at4"><img src="assets/print/tasting-card.webp" alt="A Slicio taste test card"><p class="pill red">Scan. Rate. Earn a crust.</p></aside>
-  </div>
-  <aside class="notes">
-    <p data-s="1">The OG Cheese: red sauce and whole-milk mozzarella, nothing else.</p>
-    <p data-s="2">Buffalo Chicken: buffalo base, chicken, mozzarella, ranch.</p>
-    <p data-s="3">Our dessert slice: Nutella on our crust.</p>
-    <p data-s="4">Every pizza gets a card. Guests scan it, rate it 1 to 5, and earn a crust in the app.</p>
-  </aside>
-</section>
-
-<!-- ===================== 14 WHAT WE KEEP PER SLICE ===================== -->
-<section class="slide" id="s-slice" data-title="What we keep per slice" data-tone="red" data-time="24" data-steps="0" data-who="The numbers">
-  <p class="kicker rv">What we keep from every slice</p>
-  <div class="sl-top">
-    <h2 class="disp h-mega rv" style="--d:.1s"><b data-counter="5.48" data-decimals="2" data-prefix="$">$5.48</b></h2>
-    <p class="pill rv" style="--d:.4s">after food, box, rewards and card fees</p>
-  </div>
-  <div class="pos bar-panel at1">
-    <p class="t-m">The average slice sells for <b>$7.04</b></p>
-    <div class="bar"><i class="c1"></i><i class="c2"></i><i class="c3"></i></div>
-    <ul class="legend t-s"><li><i class="c1"></i>Food + box $1.81</li><li><i class="c2"></i>Rewards + fees $0.31</li><li><i class="c3"></i>We keep $4.93</li></ul>
-    <p class="t-s plus">Sauces and drinks add $0.55, so we keep $5.48.</p>
-  </div>
-  <aside class="notes">
-    <p data-s="0">$5.48 is what we keep from every slice after the food, the box, rewards and card fees.</p>
-    <p data-s="1">Average slice $7.04 (blended draft prices). Food and box $1.81. Rewards and card fees $0.31. Contribution $4.93. Sauces and drinks add $0.55, so $5.48.</p>
-  </aside>
-</section>
-
-<!-- ===================== 15 BREAK-EVEN ===================== -->
-<section class="slide" id="s-be" data-title="Costs and break-even" data-tone="dark" data-time="18" data-steps="0" data-who="The numbers">
-  <div class="pos be-left">
-    <p class="kicker rv">Costs</p>
-    <h2 class="disp h-xl rv" style="--d:.1s">We keep<br>costs <span class="honey">low.</span></h2>
-    <p class="t-xl rv" style="--d:.3s">A licensed kitchen.<br>Pickups. Pop-ups. Catering.</p>
-  </div>
-  <div class="pos be-right at1">
-    <p class="kicker">A weekly pickup breaks even at</p>
-    <p class="disp h-xxl"><b class="honey" data-counter="30">30</b> slices</p>
-    <div class="dots30" data-gen="dots" data-n="30" data-cls="d30"></div>
-  </div>
-  <aside class="notes">
-    <p data-s="0">Costs stay low: a licensed kitchen, with pickups, pop-ups and catering.</p>
-    <p data-s="1">A weekly pickup breaks even at 30 slices (a pop-up at 53).</p>
-  </aside>
-</section>
-
-<!-- ===================== 16 THE MONEY ===================== -->
-<section class="slide" id="s-money" data-title="The money" data-tone="flour" data-time="24" data-steps="0" data-who="The numbers">
-  <p class="kicker rv">Cash at the end of each month, 2027</p>
-  <div class="nums-grid">
-    <svg class="chart rv" viewBox="0 0 1060 640" role="img" aria-label="Cash by month in 2027: lowest in February, back above zero in October" data-chart="cash"></svg>
-    <ul class="stats">
-      <li class="at1"><b class="disp" data-counter="43000" data-prefix="$">$43,000</b><span class="t-l">in sales, year one</span></li>
-      <li class="at2"><b class="disp" data-counter="8800" data-prefix="$">$8,800</b><span class="t-l">operating profit, year one</span></li>
-      <li class="at3"><b class="disp red">Oct 2027</b><span class="t-l">startup money paid back</span></li>
-    </ul>
-  </div>
-  <aside class="notes">
-    <p data-s="1">Model: $43,000 in sales in year one ($43,155).</p>
-    <p data-s="2">About $8,800 operating profit, before valuing the team's time ($8,838).</p>
-    <p data-s="3">Startup money paid back by October 2027. Lowest cash is Feb 2027, about $6,300 below zero.</p>
-  </aside>
-</section>
-
-<!-- ===================== WHAT WE'VE BUILT ===================== -->
-<section class="slide" id="s-built-2" data-title="Built: the product" data-tone="flour" data-time="28" data-steps="0" data-who="What we've built">
+<section class="slide" id="s-built-2" data-title="Built: the product" data-tone="flour" data-time="24" data-steps="0" data-who="Solution">
   <p class="kicker rv">What we've already built &middot; 1 of 2</p>
   <div class="pos cs-text">
     <h2 class="disp rv" style="--d:.1s">The <span class="red">product.</span></h2>
@@ -1317,8 +1380,7 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="0">Shop is a concept render, not a real location.</p>
   </aside>
 </section>
-
-<section class="slide" id="s-built-3" data-title="Built: the tech and the plan" data-tone="dark" data-time="18" data-steps="0" data-who="What we've built">
+<section class="slide" id="s-built-3" data-title="Built: the tech and the plan" data-tone="dark" data-time="12" data-steps="0" data-who="Solution">
   <p class="kicker rv">What we've already built &middot; 2 of 2</p>
   <div class="bl-grid">
     <div class="bl-text">
@@ -1345,74 +1407,193 @@ body.reader .cs-cap{position:static;opacity:1!important;font-size:16px!important
     <p data-s="3">Taste test system, business plan, financial model, lean canvas. 150 recipes, 52 weekly lineups planned, 20 styles.</p>
   </aside>
 </section>
-
-<!-- ===================== 20 LEAN CANVAS ===================== -->
-<section class="slide nopat" id="s-canvas" data-title="Slicio Lean Canvas" data-tone="flour" data-time="40" data-steps="0" data-who="The plan">
-  <h2 class="disp cv-title rv">Slicio <span class="red">Lean Canvas</span></h2>
-  <div class="cv">
-    <section class="cb1" data-g="1"><h3><i>1</i>Customer problems</h3><ul>
-      <li>The same few slices every day, so no reason to come back</li><li>Small slices, or slices from under a heat lamp</li><li>Takeout slices get soggy</li></ul></section>
-    <section class="cb4" data-g="2"><h3><i>4</i>Solution</h3><ul>
-      <li>A new lineup every Sunday night</li><li>2 slices that never leave</li><li>Crust Club app</li></ul></section>
-    <section class="cb9" data-g="3"><h3><i>9</i>Key metrics</h3><ul>
-      <li>Slices per pickup (break-even: 30)</li><li>Repeat customers</li><li>Crust Club sign-ups and votes</li></ul></section>
-    <section class="cb3" data-g="2"><h3><i>3</i>Unique value</h3><ul>
-      <li>Giant slices: a quarter of a 16-inch pie</li><li>A new lineup every week</li><li>Rewards and a monthly vote</li><li><b>Let It Crust.</b></li></ul></section>
-    <section class="cb8" data-g="3"><h3><i>8</i>Customer relationships</h3><ul>
-      <li>Crust Club rewards</li><li>Monthly Slice of the Month vote</li><li>Tastings and feedback</li></ul></section>
-    <section class="cb5" data-g="3"><h3><i>5</i>Channels</h3><ul>
-      <li>Weekly pre-order pickups</li><li>Pop-ups and events</li><li>Catering for groups</li></ul></section>
-    <section class="cb2" data-g="1"><h3><i>2</i>Customer segments</h3><ul>
-      <li>Students</li><li>Families and neighbors</li><li>Teams, clubs and offices</li><li>Early followers</li></ul></section>
-    <section class="cb7" data-g="4"><h3><i>7</i>Cost structure</h3><ul>
-      <li>$1.81 of food and box per slice</li><li>Licensed kitchen time and permits</li><li>$6,300 to start, $384 a month fixed</li></ul></section>
-    <section class="cb6" data-g="4"><h3><i>6</i>Revenue streams</h3><ul>
-      <li>Slices in three price tiers</li><li>Sauces and drinks</li><li>Catering orders, 40 slice minimum</li></ul></section>
+<section class="slide" id="s-q3" data-title="Solution: 3 questions we still need to answer" data-tone="flour" data-time="28" data-steps="0" data-who="Solution">
+  <p class="kicker rv">Solution, still open</p>
+  <h2 class="disp h-l rv" style="--d:.1s">3 questions to <span class="red">answer.</span></h2>
+  <ol class="pos q-list">
+    <li class="at1"><b class="disp">1</b><p>Which slices do people actually want to buy again?</p></li>
+    <li class="at2"><b class="disp">2</b><p>Is about $6.50 the right price for a giant slice when Pop's charges $4.50 for a regular one?</p></li>
+    <li class="at3"><b class="disp">3</b><p>Can a weekly pre-order pickup sell 30 slices, our break-even, and does the slice stay good on the way home with our box and reheat card?</p></li>
+  </ol>
+  <div class="pos q-how at4">
+    <p class="kicker">How we learned what we know</p>
+    <ul><li>Our own after-practice experience</li><li>Problem statements and empathy map</li><li>Googling like a customer</li><li>The 223-menu price scan</li><li>Studying Crumbl</li><li>The mentor meeting on our BMC</li></ul>
   </div>
   <aside class="notes">
-    <p data-s="0">The team's incubatorEDU lean canvas (the BMC), nine boxes in one view.</p>
-    <p data-s="1">Problems and customer segments.</p>
-    <p data-s="2">Unique value and solution.</p>
-    <p data-s="3">Channels, relationships and key metrics.</p>
-    <p data-s="4">Cost structure ($1.81 food and box on a $7.04 average slice) and revenue streams.</p>
+    <p>Question 1: which slices do people actually want to buy again? We answer it at the first taste test.</p>
+    <p>Question 2: is about $6.50 the right price for a giant slice when Pop's charges $4.50 for a regular one? All prices are drafts to test in tastings.</p>
+    <p>Question 3: can a weekly pre-order pickup sell 30 slices (our break-even), and does the slice stay good on the way home with our box and reheat card?</p>
+    <p>How we learned: our own experience, problem statements and empathy map, Googling like a customer, the 223-menu price scan, studying Crumbl, the mentor meeting on our BMC.</p>
   </aside>
 </section>
-
-<!-- ===================== 21 THE ASK ===================== -->
-<section class="slide" id="s-ask" data-title="The ask" data-tone="red" data-time="32" data-steps="0" data-who="The ask">
+<section class="slide" id="s-tasting" data-title="Our first tasting" data-tone="flour" data-time="20" data-steps="0" data-who="Solution">
+  <p class="kicker rv">Our first tasting answers questions 1 and 2</p>
+  <h2 class="disp h-l rv" style="--d:.1s">Three slices. <span class="red">One vote.</span></h2>
+  <div class="ts-row">
+    <article class="ts at1"><img src="assets/slices/og-cheese.svg" alt=""><h3 class="disp h-s">The OG Cheese</h3><p class="t-m">Red sauce and whole-milk mozzarella, nothing else</p></article>
+    <article class="ts at2"><img src="assets/slices/buffalo-chicken.svg" alt=""><h3 class="disp h-s">Buffalo Chicken</h3><p class="t-m">Buffalo base, chicken, mozzarella, ranch</p></article>
+    <article class="ts at3"><img src="assets/slices/nutella.svg" alt=""><h3 class="disp h-s">Nutella</h3><p class="t-m">Our dessert slice: Nutella on our crust</p></article>
+    <aside class="ts-card at4"><img src="assets/print/tasting-card.webp" alt="A Slicio taste test card"><p class="pill red">Scan. Rate 1 to 5. Would you buy this slice?</p></aside>
+  </div>
+  <aside class="notes">
+    <p data-s="1">The OG Cheese: red sauce and whole-milk mozzarella, nothing else.</p>
+    <p data-s="2">Buffalo Chicken: buffalo base, chicken, mozzarella, ranch.</p>
+    <p data-s="3">Our dessert slice: Nutella on our crust.</p>
+    <p data-s="4">Every pizza gets a card. Guests scan it, rate it 1 to 5 and answer "Would you buy this slice?". That answers question 1 (what they want again) and question 2 (the price).</p>
+  </aside>
+</section>
+<section class="slide" id="s-comp" data-title="Competition: who else and how we are different" data-tone="dark" data-time="26" data-steps="0" data-who="Competition">
+  <p class="kicker rv">Competition</p>
+  <h2 class="disp h-l rv" style="--d:.1s">How we are <span class="honey">different.</span></h2>
+  <div class="pos cmp">
+    <div class="cr ch"><span></span><p class="rv" style="--d:.2s">Pop's Pizza<small>direct</small></p><p class="rv" style="--d:.28s">Domino's<small>direct</small></p><p class="rv" style="--d:.36s">Crumbl Cookies<small>indirect</small></p><p class="us rv" style="--d:.44s">Slicio<small>us</small></p></div>
+    <div class="cr at1"><span>Price and portion</span><p>Regular slice, $4.50</p><p>Cheap whole pies</p><p>$4.50 to $5.50 a cookie</p><p class="us">Giant: about 1.6x a normal slice</p></div>
+    <div class="cr at2"><span>Something new</span><p>Standard menu</p><p>Big fixed menu</p><p>6 new flavors a week</p><p class="us">New slices every Sunday</p></div>
+    <div class="cr at3"><span>Rewards</span><p>No rewards app</p><p>Rewards app</p><p>4-tier rewards app</p><p class="us">Crust Club rewards</p></div>
+    <div class="cr at4"><span>Having a say</span><p>No</p><p>No</p><p>Top tiers vote</p><p class="us">Monthly Slice of the Month vote</p></div>
+  </div>
+  <aside class="notes">
+    <p>Main competitors (Ch 1.6): Pop's Pizza, Mundelein (direct); Domino's (direct); Crumbl Cookies (indirect, the weekly-drop model we follow).</p>
+    <p>Pop's: cheese slice $4.50, slice and soda $6.00, regular-size slice, standard menu, only slice seller in Mundelein, no rewards app, no customer say. Domino's: cheap whole pies only, big fixed menu, Domino's Rewards app. Crumbl: about $4.50 to $5.50 a cookie, 6 new or returning flavors a week plus 2 classics, rewards app with 4 tiers, higher tiers vote.</p>
+  </aside>
+</section>
+<section class="slide" id="s-comp2" data-title="Competition: what the research says" data-tone="flour" data-time="20" data-steps="0" data-who="Competition">
+  <p class="kicker rv">Competition, what the research says</p>
+  <h2 class="disp h-l rv" style="--d:.1s">Three facts we <span class="red">found.</span></h2>
+  <div class="pos facts">
+    <article class="fact at1"><b class="disp"><i data-counter="0">0</i></b><p class="t-l">giant slices in Mundelein or nearby towns</p><p class="t-s">Closest: Chicago and Geneva, $6.00 to $8.50.</p></article>
+    <article class="fact at2"><b class="disp">$<i data-counter="5.05" data-decimals="2">5.05</i></b><p class="t-l">median cheese slice, from 223 menus</p><p class="t-s">Our giant slice is about 18% cheaper per square inch.</p></article>
+    <article class="fact at3"><b class="disp">$1.84M<em>to</em>$1.14M</b><p class="t-l">Crumbl sales per store, 2022 to 2025</p><p class="t-s">A weekly menu alone is not enough.</p></article>
+  </div>
+  <aside class="notes">
+    <p>Google like a pro: no shop in Mundelein, Libertyville, Vernon Hills, Grayslake or Lake Zurich sells a giant slice; the closest are in Chicago and Geneva at $6.00 to $8.50.</p>
+    <p>Online menu price scan: 223 menus read, 46 list a cheese slice, median $5.05 (Chicago $5.00, suburbs about $5.90). Our $6.50 giant slice is about 18% cheaper per square inch than a typical $5.00 slice.</p>
+    <p>Crumbl study: average store sales fell from $1.84M (2022) to about $1.14M (2025), so a new menu every week is not enough by itself.</p>
+  </aside>
+</section>
+<section class="slide" id="s-uvp" data-title="Unique value proposition" data-tone="red" data-time="18" data-steps="0" data-who="Unique value proposition">
+  <p class="kicker rv">Unique value proposition</p>
+  <h2 class="disp uvp-h rv" style="--d:.1s">Giant slices and a new lineup every week, right here in Mundelein.</h2>
+  <p class="uvp-sub t-xl rv" style="--d:.25s">Each slice is a quarter of a 16-inch pie, for students, families and teams. New slices every Sunday night, next to two favorites that never leave.</p>
+  <div class="uvp-ben">
+    <article class="at1"><b class="disp">Bigger slice. Fair price.</b><p class="t-m">About 1.6 times a normal slice.</p></article>
+    <article class="at2"><b class="disp">Something new every week.</b><p class="t-m">Revealed Sunday night.</p></article>
+    <article class="at3"><b class="disp">Crust Club rewards.</b><p class="t-m">1 free slice for every 6. Members vote.</p></article>
+  </div>
+  <aside class="notes">
+    <p>Headline (Ch 1.7): Giant slices and a new lineup every week, right here in Mundelein.</p>
+    <p>Benefits: a bigger slice at a fair price (about 1.6 times a normal slice); something new every week; Crust Club rewards (1 free slice for every 6, members vote on the Slice of the Month).</p>
+  </aside>
+</section>
+<section class="slide nopat" id="s-bmc1" data-title="BMC: our first BMC, October 11" data-tone="flour" data-time="14" data-steps="0" data-who="BMC">
+  <h2 class="disp cv-title rv">Our first BMC, <span class="red">October 11</span></h2>
+  <div class="cv cv-static"><section class="cb1" data-n="1"><h3><i>1</i>Customer problems</h3><ul><li>The same few slices every day, so no reason to come back</li><li>Small slices, or slices from under a heat lamp</li><li>Takeout slices get soggy</li><li>Today: whole pies, delivery apps, fixed menus</li></ul></section><section class="cb4" data-n="4"><h3><i>4</i>Solution</h3><ul><li>4 rotating slices plus 1 anchor, The OG Pepperoni</li><li>Revealed Sunday night</li><li>Crust Club app</li></ul></section><section class="cb9" data-n="9"><h3><i>9</i>Key metrics</h3><ul><li>Slices per pickup (break-even 30)</li><li>Repeat customers</li><li>Sign-ups and votes</li></ul></section><section class="cb3" data-n="3"><h3><i>3</i>Unique value</h3><ul><li>Giant slices: a quarter of a 16-inch pie</li><li>A new lineup every week, plus an anchor that never leaves</li><li>Rewards and a monthly vote</li><li><b>Let It Crust.</b></li></ul></section><section class="cb8" data-n="8"><h3><i>8</i>Customer relationships</h3><ul><li>Crust Club rewards</li><li>Monthly Slice vote</li><li>Tastings and feedback</li></ul></section><section class="cb5" data-n="5"><h3><i>5</i>Channels</h3><ul><li>Weekly pickups, then pop-ups and events</li><li>Catering for groups</li><li>Sunday reveal in the app and on the site</li></ul></section><section class="cb2" data-n="2"><h3><i>2</i>Customer segments</h3><ul><li>Students</li><li>Families and neighbors</li><li>Teams, clubs and offices</li><li>Early followers</li></ul></section><section class="cb7" data-n="7"><h3><i>7</i>Cost structure</h3><ul><li>$1.87 of food and box per slice, on a $7.10 average slice</li><li>Licensed kitchen time and permits</li><li>$6,004 to start, about $384 a month fixed</li></ul></section><section class="cb6" data-n="6"><h3><i>6</i>Revenue streams</h3><ul><li>Slices in three price tiers</li><li>Sauces and drinks</li><li>Catering orders, 40 slice minimum</li></ul></section></div>
+  <aside class="notes">
+    <p>The first lean canvas, from the mentor meeting on October 11: same nine boxes and the same problem statement we have today.</p>
+    <p>One anchor slice (The OG Pepperoni), $1.87 of food and packaging on a $7.10 average slice, and no competitor research yet.</p>
+  </aside>
+</section>
+<section class="slide nopat bmc-now" id="s-bmc2" data-title="BMC: our BMC now" data-tone="flour" data-time="60" data-steps="10" data-who="BMC">
+  <h2 class="disp cv-title rv"><span class="m m-honey nm">Slicio</span> BMC <span class="red">now</span></h2>
+  <div class="cv cv-now"><section class="cb1" data-n="1"><h3><i>1</i>Customer problems</h3><ul><li>The same few slices every day, so no reason to come back</li><li>Small slices, or slices from under a heat lamp</li><li>Takeout slices get soggy</li><li class="m m-red">Pop's Pizza is the only slice seller in Mundelein (cheese $4.50); no nearby town sells a giant slice</li></ul></section><section class="cb4" data-n="4"><h3><i>4</i>Solution</h3><ul><li class="m m-honey">4 rotating slices (3 new + Slice of the Month) and 2 permanent: OG Pepperoni, OG Cheese</li><li>Revealed Sunday night</li><li>Crust Club app</li></ul></section><section class="cb9" data-n="9"><h3><i>9</i>Key metrics</h3><ul><li>Slices per pickup (break-even 30)</li><li>Repeat customers</li><li>Sign-ups and votes</li><li class="m m-green">Taste test ratings and would-you-buy answers</li></ul></section><section class="cb3" data-n="3"><h3><i>3</i>Unique value</h3><ul><li>Giant slices: a quarter of a 16-inch pie</li><li class="m m-honey">A new lineup every week, plus two slices that never leave</li><li>Rewards and a monthly vote</li><li><b>Let It Crust.</b></li></ul></section><section class="cb8" data-n="8"><h3><i>8</i>Customer relationships</h3><ul><li>Crust Club rewards</li><li>Monthly Slice vote</li><li class="m m-green">QR taste tests</li><li class="m m-green">Menu open without an account</li></ul></section><section class="cb5" data-n="5"><h3><i>5</i>Channels</h3><ul><li>Weekly pickups, then pop-ups and events</li><li>Catering for groups</li><li class="m m-honey">Sunday reveal in the app, on the site, Instagram and TikTok @slicio_pizza</li></ul></section><section class="cb2" data-n="2"><h3><i>2</i>Customer segments</h3><ul><li>Students</li><li>Families and neighbors</li><li>Teams, clubs and offices</li><li>Early followers</li></ul></section><section class="cb7" data-n="7"><h3><i>7</i>Cost structure</h3><ul><li class="m m-blue">$1.81 of food and box per slice, on a $7.04 average slice</li><li>Licensed kitchen time and permits</li><li>$6,004 to start, about $384 a month fixed</li></ul></section><section class="cb6" data-n="6"><h3><i>6</i>Revenue streams</h3><ul><li>Slices in three price tiers</li><li>Sauces and drinks</li><li>Catering orders, 40 slice minimum</li></ul></section></div>
+  <ul class="pos bmc-legend rv" style="--d:.3s"><li class="m m-honey">Name, brand and menu decisions</li><li class="m m-red">Competitor and price research</li><li class="m m-green">Building and testing the app and taste tests</li><li class="m m-blue">Updated financial model</li></ul>
+  <aside class="notes">
+    <p data-s="1">Box 1, customer problems: same problem statement. New (red, competitor and price research): Pop's Pizza is the only slice seller in Mundelein (cheese $4.50), and no nearby town sells a giant slice. The name is new too (gold): a trademark search refused the first name for pizza, so the company became Slicio on October 18.</p>
+    <p data-s="2">Box 2, customer segments: unchanged (11,632 households, 2,127 students).</p>
+    <p data-s="3">Box 3, unique value: now a new lineup every week plus two slices that never leave (gold, a menu decision): a plain cheese slice is the safe pick every family and picky eater likes.</p>
+    <p data-s="4">Box 4, solution: 4 rotating slices (3 new plus the Slice of the Month) and 2 permanent, The OG Pepperoni and The OG Cheese (gold).</p>
+    <p data-s="5">Box 5, channels: the Sunday reveal now also goes out on Instagram and TikTok @slicio_pizza (gold, brand).</p>
+    <p data-s="6">Box 6, revenue streams: unchanged.</p>
+    <p data-s="7">Box 7, cost structure: $1.81 of food and box on a $7.04 average slice (blue, updated financial model for the new menu mix).</p>
+    <p data-s="8">Box 8, customer relationships: taste tests now use a QR card per slice, scanned to rate it; App Store review (10-28) taught us anyone must see the menu without an account (green, building and testing the app and taste tests).</p>
+    <p data-s="9">Box 9, key metrics: new taste test ratings and "would you buy this slice?" answers (green).</p>
+    <p data-s="10">The whole canvas, every change colored by what we learned: gold name, brand and menu; red competitor and price research; green app and taste tests; blue the financial model.</p>
+  </aside>
+</section>
+<section class="slide" id="s-next" data-title="Next steps" data-tone="dark" data-time="26" data-steps="0" data-who="Next steps">
+  <p class="kicker rv">Next steps</p>
+  <h2 class="disp h-l rv" style="--d:.1s">What happens <span class="honey">next.</span></h2>
+  <ol class="pos steps-list">
+    <li class="at1"><b class="disp">1</b><div><h3>First taste test with classmates</h3><p>OG Cheese, Buffalo Chicken, Nutella: pick the launch lineup and test prices.</p></div></li>
+    <li class="at2"><b class="disp">2</b><div><h3>App to the App Store</h3><p>Resubmit with guest browsing, then launch.</p></div></li>
+    <li class="at3"><b class="disp">3</b><div><h3>Kitchen, permit, first pickup</h3><p>Kitchen signed by Nov 13. First weekly pre-order pickup the week of Jan 4, 2027 (break-even: 30 slices).</p></div></li>
+    <li class="at4"><b class="disp">4</b><div><h3>Raise $6,300</h3><p>Decide how much to raise by Nov 6. This is our ask.</p></div></li>
+  </ol>
+  <aside class="notes">
+    <p>1. First taste test with classmates (OG Cheese, Buffalo Chicken, Nutella): pick the launch lineup and test prices.</p>
+    <p>2. The app is resubmitted to the App Store with guest browsing, then launch.</p>
+    <p>3. Kitchen chosen and agreement signed by 2026-11-13 (plan); licensed kitchen time and the Lake County permit; first weekly pre-order pickup in the week of 2027-01-04, break-even 30 slices.</p>
+    <p>4. Decide how much money to raise by 2026-11-06 (plan); the ask is $6,300.</p>
+  </aside>
+</section>
+<section class="slide" id="s-slice" data-title="What we keep per slice" data-tone="red" data-time="16" data-steps="0" data-who="The numbers">
+  <p class="kicker rv">What we keep from every slice</p>
+  <div class="sl-top">
+    <h2 class="disp h-mega rv" style="--d:.1s"><b data-counter="5.48" data-decimals="2" data-prefix="$">$5.48</b></h2>
+    <p class="pill rv" style="--d:.4s">after food, box, rewards and card fees</p>
+  </div>
+  <div class="pos bar-panel at1">
+    <p class="t-m">The average slice sells for <b>$7.04</b></p>
+    <div class="bar"><i class="c1"></i><i class="c2"></i><i class="c3"></i></div>
+    <ul class="legend t-s"><li><i class="c1"></i>Food + box $1.81</li><li><i class="c2"></i>Rewards + fees $0.31</li><li><i class="c3"></i>We keep $4.93</li></ul>
+    <p class="t-s plus">Sauces and drinks add $0.55, so we keep $5.48.</p>
+  </div>
+  <aside class="notes">
+    <p data-s="0">$5.48 is what we keep from every slice after the food, the box, rewards and card fees.</p>
+    <p data-s="1">Average slice $7.04 (blended draft prices). Food and box $1.81. Rewards and card fees $0.31. Contribution $4.93. Sauces and drinks add $0.55, so $5.48.</p>
+  </aside>
+</section>
+<section class="slide" id="s-money" data-title="The money" data-tone="flour" data-time="22" data-steps="0" data-who="The numbers">
+  <p class="kicker rv">Cash at the end of each month, 2027</p>
+  <div class="nums-grid">
+    <svg class="chart rv" viewBox="0 0 1060 640" role="img" aria-label="Cash by month in 2027: lowest in February, back above zero in October" data-chart="cash"></svg>
+    <ul class="stats">
+      <li class="at1"><b class="disp" data-counter="43000" data-prefix="$">$43,000</b><span class="t-l">in sales, year one</span></li>
+      <li class="at2"><b class="disp" data-counter="8800" data-prefix="$">$8,800</b><span class="t-l">operating profit, year one</span></li>
+      <li class="at3"><b class="disp red">Oct 2027</b><span class="t-l">startup money paid back</span></li>
+    </ul>
+  </div>
+  <p class="pos be-pill pill red at3">A weekly pickup breaks even at 30 slices</p>
+  <aside class="notes">
+    <p data-s="1">Model: $43,000 in sales in year one ($43,155).</p>
+    <p data-s="2">About $8,800 operating profit, before valuing the team's time ($8,838).</p>
+    <p data-s="3">Break-even: a weekly pickup breaks even at 30 slices (a pop-up at 53).</p>
+    <p data-s="3">Startup money paid back by October 2027. Lowest cash is Feb 2027, about $6,300 below zero.</p>
+  </aside>
+</section>
+<section class="slide" id="s-ask" data-title="The ask" data-tone="red" data-time="26" data-steps="0" data-who="The ask">
   <div class="pos fa-left">
     <p class="kicker rv">The ask</p>
-    <h2 class="disp h-mega rv" style="--d:.1s"><b data-counter="6300" data-prefix="$">$6,300</b></h2>
+    <h2 class="disp h-xxl rv" style="--d:.1s"><b>$6,300</b></h2>
     <p class="pill rv" style="--d:.3s">pickups, pop-ups and catering from a licensed kitchen</p>
-    <div class="tiles at1 tight">
-      <div class="tile"><b class="disp">$43,000</b><p class="t-m">sales, year one</p></div>
-      <div class="tile"><b class="disp">$8,800</b><p class="t-m">operating profit, year one</p></div>
-      <div class="tile"><b class="disp">Oct 2027</b><p class="t-m">paid back</p></div>
-    </div>
+    <ul class="fa-small at1">
+      <li><b class="disp">$43,000</b><span>sales, year one</span></li>
+      <li><b class="disp">$8,800</b><span>operating profit, year one</span></li>
+      <li><b class="disp">Oct 2027</b><span>paid back</span></li>
+    </ul>
+    <ul class="fa-social at2"><li class="pill">Instagram @slicio_pizza</li><li class="pill">TikTok @slicio_pizza</li></ul>
   </div>
-  <div class="pos fa-right at2 r">
+  <div class="pos fa-right rv r" style="--d:.2s">
     <h2 class="disp h-l">Please invest in us.</h2>
     <div class="qr-site"><img src="assets/qr/site.svg" alt="QR code for the Slicio website"></div>
     <div class="fa-contact"><p class="t-l"><b>sliciopizza@gmail.com</b></p><p class="t-s">loganholby-web.github.io/slicio-site</p></div>
   </div>
   <aside class="notes">
-    <p data-s="0">Asking for $6,300 to launch pickups, pop-ups and catering from a licensed kitchen ($6,304 in the plan).</p>
-    <p data-s="1">Model: $43,000 sales in year one, about $8,800 operating profit, startup money paid back by October 2027.</p>
-    <p data-s="2">Please invest in us. Contact: sliciopizza@gmail.com, or scan the code for the website.</p>
+    <p data-s="0">The ask: $6,300 for pickups, pop-ups and catering from a licensed kitchen ($6,304 in the plan).</p>
+    <p data-s="0">Already said: $43,000 sales, about $8,800 operating profit, startup money paid back by October 2027.</p>
+    <p data-s="0">Please invest in us. Email sliciopizza@gmail.com, scan the code for the website, follow Instagram and TikTok @slicio_pizza.</p>
   </aside>
 </section>
-
-<!-- ===================== 22 THANK YOU ===================== -->
 <section class="slide" id="s-thanks" data-title="Thank you" data-tone="dark" data-time="10" data-steps="0" data-who="Thank you" data-music="soft">
   <div class="pos th-main">
     <h2 class="disp h-xxl rv">Thank you.</h2>
     <h2 class="disp h-xxl honey rv" style="--d:.15s">Questions?</h2>
     <p class="t-l rv" style="--d:.4s">sliciopizza@gmail.com</p>
+    <p class="t-m soft rv" style="--d:.5s">Instagram and TikTok @slicio_pizza</p>
   </div>
   <img class="pos th-logo rv" style="--d:.6s" src="assets/logo/stacked-white-1024.webp" alt="Slicio Pizza. Let It Crust.">
   <aside class="notes"><p data-s="0">Questions. Music plays softly on this slide.</p></aside>
 </section>
-
 
 
   <div id="egg"></div>
@@ -1444,12 +1625,12 @@ var meta = slides.map(function (el) {
   return {
     el: el, id: el.id, title: el.dataset.title || '', who: el.dataset.who || '',
     time: +el.dataset.time || 0, steps: +el.dataset.steps || 0, tone: el.dataset.tone || 'dark', music: el.dataset.music || '',
-    auto: (el.dataset.who || '') !== 'Intro',
+    auto: !(+el.dataset.steps > 0),
     script: !!$('.notes.script', el),
     notes: $$('.notes p', el).map(function (p) { return { s: +p.dataset.s || 0, t: p.textContent }; })
   };
 });
-slides.forEach(function (el) { if ((el.dataset.who || '') !== 'Intro') el.classList.add('auto'); });
+slides.forEach(function (el) { if (!(+el.dataset.steps > 0)) el.classList.add('auto'); });
 var plannedBefore = []; (function () { var t = COLD_S; meta.forEach(function (m, i) { plannedBefore[i] = t; t += m.time; }); })();
 
 var S = { mode: 'intro', cur: -1, step: 0, started: 0, last: 0, timer: false, musicOn: true, go: null };
@@ -1665,7 +1846,8 @@ function startCarousel(box) {
 }
 function onLeaveReset(m) {
   var el = m.el;
-  for (var k = 1; k <= 6; k++) el.classList.remove('s' + k);
+  for (var k = 1; k <= 12; k++) el.classList.remove('s' + k);
+  bmcStep(el, 0);
   $$('.gs-pie', el).forEach(function (p) { p.classList.remove('split'); });
   $$('[data-counter]', el).forEach(resetCounter);
   $$('[data-g]', el).forEach(function (b) { b.classList.remove('on'); });
@@ -1673,9 +1855,21 @@ function onLeaveReset(m) {
   $$('.cs-item', el).forEach(function (it) { it.classList.remove('feat'); it.classList.remove('ret'); });
 }
 
+/* BMC now: click 1 to 9 puts the focus on box 1 to 9 (the other boxes dim, the changed lines of the boxes seen so far are colored); click 10 shows the whole canvas with every change colored */
+function bmcStep(el, step) {
+  var cv = $('.cv-now', el); if (!cv) return;
+  var fin = step > 9;
+  cv.classList.toggle('focusing', step >= 1 && !fin);
+  cv.classList.toggle('final', fin);
+  $$('section', cv).forEach(function (b) {
+    var n = +b.dataset.n; b.classList.toggle('on', !fin && n === step); b.classList.toggle('seen', fin || (step >= 1 && n <= step));
+  });
+  el.classList.toggle('named', step >= 1);
+}
 function applyStep(i, step, prev, instant) {
   var el = slides[i];
-  for (var k = 1; k <= 6; k++) el.classList.toggle('s' + k, k <= step);
+  for (var k = 1; k <= 12; k++) el.classList.toggle('s' + k, k <= step);
+  bmcStep(el, step);
   if (step > prev) {
     for (var s = prev + 1; s <= step; s++) {
       $$('.at' + s + ' [data-counter], .at' + s + '[data-counter]', el).forEach(function (c) { if (instant) finishCounter(c); else runCounter(c, el.classList.contains('auto') ? 420 + (s - 1) * 120 : 200); });
@@ -1718,7 +1912,7 @@ function showSlide(i, step, instant) {
     S.cur = i;
     $$('[data-counter]', el).forEach(function (c) { if (!inStep(c, el)) { if (instant) finishCounter(c); else runCounter(c); } });
     onEnter(m, instant);
-    applyStep(i, m.auto ? 6 : step, 0, instant);
+    applyStep(i, m.auto ? 12 : step, 0, instant);
   } else if (!m.auto) {
     applyStep(i, step, S.step, false);
   }
@@ -2080,7 +2274,7 @@ function initNotes() {
 function readerWanted() { return !!(window.matchMedia && matchMedia('(orientation: portrait) and (max-width: 1000px)').matches); }
 function enterReader() {
   READER = true; document.body.className = 'reader'; document.documentElement.classList.add('reader-on');
-  slides.forEach(function (el) { for (var k = 1; k <= 6; k++) el.classList.add('s' + k); el.classList.add('active'); });
+  slides.forEach(function (el) { for (var k = 1; k <= 12; k++) el.classList.add('s' + k); el.classList.add('active'); bmcStep(el, 99); });
   $$('.gs-pie').forEach(function (p) { p.classList.add('split'); });
   $$('[data-counter]').forEach(finishCounter);
   var h = parseInt((location.hash || '').slice(1), 10);
