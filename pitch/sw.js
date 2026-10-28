@@ -1,5 +1,5 @@
 /* Slicio pitch offline cache. Scope: this folder only (the pitch page and its assets). Written by docs/pitch/build_deck.py. */
-const VERSION = '46da56132f';
+const VERSION = '1375c66578';
 const CACHE = 'slicio-pitch-' + VERSION;
 const ASSETS = [
 "./",
@@ -18,9 +18,9 @@ const ASSETS = [
 "assets/logo/horizontal-red-1024.webp",
 "assets/logo/horizontal-white-1024.webp",
 "assets/logo/icon-red-1024.webp",
-"assets/logo/stacked-red-1024.webp",
 "assets/logo/stacked-white-1024.webp",
 "assets/music.mp3",
+"assets/print/cup.webp",
 "assets/print/lid-sticker.webp",
 "assets/print/sauce-labels.webp",
 "assets/print/tasting-card.webp",
@@ -57,7 +57,8 @@ const ASSETS = [
 "assets/team/christian.webp",
 "assets/team/connor.webp",
 "assets/team/logan.webp",
-"assets/team/nino.webp"
+"assets/team/nino.webp",
+"assets/voice.mp3"
 ];
 const SCOPE_PATH = new URL('./', self.location).pathname;
 
