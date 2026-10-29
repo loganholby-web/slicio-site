@@ -1,5 +1,5 @@
 /* Slicio pitch offline cache. Scope: this folder only (the pitch page and its assets). Written by docs/pitch/build_deck.py. */
-const VERSION = '2bef9af0c5';
+const VERSION = 'fc1721c1f9';
 const CACHE = 'slicio-pitch-' + VERSION;
 const ASSETS = [
 "./",
@@ -26,8 +26,9 @@ const ASSETS = [
 "assets/print/tasting-card.webp",
 "assets/qr/app.svg",
 "assets/qr/site.svg",
-"assets/renders/box-flat.webp",
-"assets/renders/box-open.webp",
+"assets/renders/slice-box-closed.webp",
+"assets/renders/slice-box-open.webp",
+"assets/renders/slice-box-solo.webp",
 "assets/renders/storefront.webp",
 "assets/slices/buffalo-chicken.svg",
 "assets/slices/nutella.svg",
