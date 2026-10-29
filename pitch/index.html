@@ -1715,7 +1715,7 @@ body.reader #s-sell .wk-lab{grid-column:auto;font-size:16px;padding:6px 0}
     <p data-s="0">Please invest in us. Email sliciopizza@gmail.com, scan the code for the website, follow Instagram and TikTok @slicio_pizza.</p>
   </aside>
 </section>
-<section class="slide" id="s-thanks" data-title="Thank you" data-tone="dark" data-time="10" data-steps="0" data-who="Thank you" data-music="soft">
+<section class="slide" id="s-thanks" data-title="Thank you" data-tone="dark" data-time="10" data-steps="1" data-who="Thank you" data-music="soft" data-music-step="1">
   <div class="pos th-main">
     <h2 class="disp h-xxl rv">Thank you.</h2>
     <h2 class="disp h-xxl honey rv" style="--d:.15s">Questions?</h2>
@@ -1723,7 +1723,7 @@ body.reader #s-sell .wk-lab{grid-column:auto;font-size:16px;padding:6px 0}
     <p class="t-m soft rv" style="--d:.5s">Instagram and TikTok @slicio_pizza</p>
   </div>
   <img class="pos th-logo rv" style="--d:.6s" src="assets/logo/stacked-white-1024.webp" alt="Slicio Pizza. Let It Crust.">
-  <aside class="notes"><p data-s="0">Questions. Music plays softly on this slide.</p></aside>
+  <aside class="notes"><p data-s="0">Say "Thank you for your time." No music yet: press Next once more to start it.</p><p data-s="1">The music plays softly while we take questions.</p></aside>
 </section>
 
 
@@ -1755,7 +1755,7 @@ var BC = ('BroadcastChannel' in window) ? new BroadcastChannel('slicio-pitch-1')
 var meta = slides.map(function (el) {
   return {
     el: el, id: el.id, title: el.dataset.title || '', who: el.dataset.who || '',
-    time: +el.dataset.time || 0, steps: +el.dataset.steps || 0, tone: el.dataset.tone || 'dark', music: el.dataset.music || '',
+    time: +el.dataset.time || 0, steps: +el.dataset.steps || 0, tone: el.dataset.tone || 'dark', music: el.dataset.music || '', musicStep: +el.dataset.musicStep || 0,
     auto: !(+el.dataset.steps > 0),
     script: !!$('.notes.script', el),
     notes: $$('.notes p', el).map(function (p) { return { s: +p.dataset.s || 0, t: p.textContent }; })
@@ -2018,7 +2018,8 @@ function applyStep(i, step, prev, instant) {
 
 function musicTarget() {
   if (S.mode === 'cold') return cold.duck ? DUCK : 0.45;
-  if (S.mode === 'show' && S.cur >= 0 && meta[S.cur].music === 'soft') return 0.25;
+  // a soft-music slide can wait for a press: data-music-step="1" starts it on the slide's step 1 (the Thank you slide)
+  if (S.mode === 'show' && S.cur >= 0 && meta[S.cur].music === 'soft' && S.step >= meta[S.cur].musicStep) return 0.25;
   return 0;
 }
 
