@@ -1,5 +1,5 @@
 /* Slicio pitch offline cache. Scope: this folder only (the pitch page and its assets). Written by docs/pitch/build_deck.py. */
-const VERSION = '49d9a39990';
+const VERSION = '0b50395909';
 const CACHE = 'slicio-pitch-' + VERSION;
 const ASSETS = [
 "./",
