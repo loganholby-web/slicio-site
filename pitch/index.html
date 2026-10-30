@@ -1944,7 +1944,7 @@ function onEnter(m, instant) {
 }
 
 /* product carousel: thumbnails along the bottom; one rises into the big spot, holds, and goes back while the next rises */
-var CS_HOLD = 3500;
+var CS_HOLD = 2300;  // 2026-10-29, Logan: rotate faster so the pitch keeps moving (was 3500); all 7 pictures show in about 15 s
 function buildCarousel(box) {
   var items = $$('.cs-item', box), n = items.length, tw = 150, gap = n > 1 ? (1100 - n * tw) / (n - 1) : 0;
   items.forEach(function (it) { it.style.transition = 'none'; });
@@ -1971,7 +1971,7 @@ function startCarousel(box) {
     timers.push(later(function () { if (prev) prev.classList.remove('ret'); }, 1100));
     timers.push(later(nextItem, CS_HOLD));
   }
-  timers.push(later(nextItem, 1300));
+  timers.push(later(nextItem, 900));
 }
 function onLeaveReset(m) {
   var el = m.el;
