@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Catering | Slicio Pizza</title>
-<meta name="description" content="Giant slices for teams, clubs and parties. Catering is part of our launch plan.">
+<meta name="description" content="Giant slices for teams, clubs and parties. Catering is part of our launch plan: send a request and we write back.">
 
 <meta name="theme-color" content="#FAF7F2">
 <link rel="canonical" href="https://sliciopizza.com/catering/">
@@ -15,24 +15,26 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Slicio Pizza">
 <meta property="og:title" content="Catering | Slicio Pizza">
-<meta property="og:description" content="Giant slices for teams, clubs and parties. Catering is part of our launch plan.">
+<meta property="og:description" content="Giant slices for teams, clubs and parties. Catering is part of our launch plan: send a request and we write back.">
 <meta property="og:url" content="https://sliciopizza.com/catering/">
 <meta property="og:image" content="https://sliciopizza.com/og.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Slicio Pizza logo and the line Let It Crust, next to a pepperoni pizza.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Slicio Pizza logo and the line Let It Crust, next to a pepperoni pizza.">
 
 <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('reduced-motion');}catch(e){}})();</script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="e21ee1cf-b9c6-4207-ae83-cb3e0c432fba" data-domains="sliciopizza.com"></script>
   <script type="module" crossorigin src="../assets/ratings-shared-B6BZ071r.js"></script>
-  <script type="module" crossorigin src="../assets/main-BDyPc0Qy.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/style-Cd2H0PYI.css">
+  <script type="module" crossorigin src="../assets/main-CTkQJZVU.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/style-C7jI_0-K.css">
   <link rel="preload" as="font" type="font/woff2" href="../assets/big-shoulders-display-latin-wght-normal-Bn_gnr7w.woff2" crossorigin="">
   <link rel="preload" as="font" type="font/woff2" href="../assets/figtree-latin-wght-normal-D_ZTVpCC.woff2" crossorigin="">
 </head>
 <body class="page-catering">
-<!-- lineup: week 43 -->
+<!-- lineup: week 44 -->
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-tone="light" data-header>
 <div class="site-header__bar">
@@ -55,7 +57,7 @@
 <div class="wrap">
 <p class="eyebrow">Catering</p>
 <h1 class="display-xl page-title" id="page-title">Slices for the whole room.</h1>
-<p class="lead">Teams, clubs, classrooms and parties. Catering is part of our launch plan, and the inquiry form opens at launch.</p>
+<p class="lead">Teams, clubs, classrooms and parties. Catering is part of our launch plan. Send us a request and we’ll write back about what we can do.</p>
 </div>
 </section>
 <section class="section plan" data-tone="light" aria-labelledby="plan-title">
@@ -74,10 +76,54 @@
 </div>
 </section>
 <section class="section catering-form" data-tone="white" aria-label="Catering inquiry">
-<div class="wrap"><div class="panel panel--closed" id="catering-form">
-<p class="status-pill status-pill--solid">Opens at launch</p>
-<h2 class="display-m">Catering inquiries open at launch.</h2>
-<p>There’s no form to fill in yet, and we don’t have an email address or phone number to share. Check back soon.</p>
+<div class="wrap"><div class="panel catering-mail" id="catering-form">
+<p class="eyebrow">Request catering</p>
+<h2 class="display-m">Tell us about your event.</h2>
+<p class="catering-mail__lead">Fill this in and press the button. Your email app opens with a message to <a href="mailto:sliciopizza@gmail.com">sliciopizza@gmail.com</a>, ready to send. Nothing is sent until you press Send there, and nothing is booked until we write back.</p>
+<form class="form catering-mail__form" data-catering-mail data-to="sliciopizza@gmail.com" action="mailto:sliciopizza@gmail.com?subject=Catering%20request" method="post" enctype="text/plain" novalidate>
+<div class="form__row">
+<div class="field">
+<label for="cm-name">Your name</label>
+<input id="cm-name" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="First and last name">
+
+<p class="field__error" role="alert" hidden></p>
+</div>
+<div class="field">
+<label for="cm-group">Group or event <span class="field__opt">(optional)</span></label>
+<input id="cm-group" name="group" type="text" maxlength="120" placeholder="Team dinner, club meeting, birthday…">
+
+<p class="field__error" role="alert" hidden></p>
+</div>
+</div>
+<div class="form__row">
+<div class="field">
+<label for="cm-date">Date <span class="field__opt">(optional)</span></label>
+<input id="cm-date" name="date" type="date" maxlength="120" placeholder="">
+
+<p class="field__error" role="alert" hidden></p>
+</div>
+<div class="field">
+<label for="cm-people">How many people</label>
+<input id="cm-people" name="people" type="text" inputmode="numeric" required maxlength="6" placeholder="25">
+
+<p class="field__error" role="alert" hidden></p>
+</div>
+</div>
+<div class="field">
+<label for="cm-slices">Slices you’re interested in <span class="field__opt">(optional)</span></label>
+<input id="cm-slices" name="slices" type="text" maxlength="200" placeholder="The OG Pepperoni, The OG Cheese, Garlic White">
+<p class="field__hint">The menu changes every week, so this is just a starting point.</p>
+<p class="field__error" role="alert" hidden></p>
+</div>
+<div class="field">
+<label for="cm-notes">Anything else <span class="field__opt">(optional)</span></label>
+<textarea id="cm-notes" name="notes" rows="4" maxlength="1000" placeholder="Pickup time, allergies, questions…"></textarea>
+<p class="field__hint">No phone numbers or home addresses, please. If you’re under 13, ask a parent to send this.</p>
+<p class="field__error" role="alert" hidden></p>
+</div>
+<button class="btn" type="submit">Open my email to send</button>
+<p class="form__status" role="status" aria-live="polite" data-catering-status></p>
+</form>
 </div></div>
 </section>
 <section class="section waitlist" id="waitlist" data-tone="red" aria-labelledby="waitlist-title">
@@ -107,7 +153,7 @@
 <h2 class="site-footer__h">Legal</h2>
 <ul>
 <li><a href="../privacy/">Privacy</a></li>
-<li><a href="../rewards-terms/">Crust Club draft terms</a></li>
+<li><a href="../rewards-terms/">Crust Club terms</a></li>
 </ul>
 </nav>
 <div class="site-footer__nav">
