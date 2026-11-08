@@ -28,9 +28,11 @@
 
 <script>(function(){var d=document.documentElement;d.classList.remove('no-js');d.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('reduced-motion');}catch(e){}})();</script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="e21ee1cf-b9c6-4207-ae83-cb3e0c432fba" data-domains="sliciopizza.com"></script>
+<script type="application/json" id="week-next">{"from":"2026-11-16","parts":{}}</script><script>(function(){var w=window.slicioWeek=window.slicioWeek||{},f=null,b=null,l=false,h=document.documentElement;w.menuDay=function(t){try{f=f||new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hourCycle:'h23',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',weekday:'short'});var p={},a=f.formatToParts(new Date(t)),i,m;for(i=0;i<a.length;i++)p[a[i].type]=a[i].value;m=Date.UTC(+p.year,+p.month-1,+p.day);if(p.weekday==='Sun'&&+p.hour%24>=12)m+=864e5;return new Date(m).toISOString().slice(0,10)}catch(e){return null}};w.load=function(){if(!l){l=true;try{b=JSON.parse(document.getElementById('week-next').textContent)}catch(e){b=null}}return b};w.shows=function(t){var n=w.load(),d;if(!n||!n.from)return false;d=w.menuDay(t==null?Date.now():t);return d!==null&&d>=n.from};w.run=function(live,t){try{if(!w.shows(t))return false;var n=b.parts,x=document.querySelectorAll('[data-wk]'),c=0,i,j,e,p,k,r;for(i=0;i<x.length;i++){e=x[i];if(e.hasAttribute('data-wk-done'))continue;p=n[e.getAttribute('data-wk')];if(p!=null){c++;if(typeof p==='string')p={html:p};if(p.html!=null)e.innerHTML=p.html;if(p.attrs)for(k in p.attrs){if(p.attrs[k]===null)e.removeAttribute(k);else e.setAttribute(k,p.attrs[k])}if(live){r=e.querySelectorAll('[data-reveal]');for(j=0;j<r.length;j++)r[j].classList.add('is-in')}}e.setAttribute('data-wk-done','')}if(!w.on){w.on=true;h.setAttribute('data-week','next')}if(c&&live){try{window.dispatchEvent(new CustomEvent('slicio:week'))}catch(e){}}return true}catch(e){return false}};try{if(w.shows()){h.classList.add('wk-pending');document.addEventListener('DOMContentLoaded',function(){w.run(false);h.classList.remove('wk-pending')})}}catch(e){}})();</script>
+  <script type="module" crossorigin src="../../assets/countdown-DWjxdOW3.js"></script>
   <script type="module" crossorigin src="../../assets/ratings-shared-B6BZ071r.js"></script>
-  <script type="module" crossorigin src="../../assets/main-B_gb3em9.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/style-mBrWQfSh.css">
+  <script type="module" crossorigin src="../../assets/main-BCH2cgri.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/style-D5unfinL.css">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/big-shoulders-display-latin-wght-normal-Bn_gnr7w.woff2" crossorigin="">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/figtree-latin-wght-normal-D_ZTVpCC.woff2" crossorigin="">
 </head>
@@ -64,7 +66,7 @@
 <figcaption class="slice-hero__cap">A 3D render made from the recipe. Real photos once we start baking.</figcaption>
 </figure></div>
 <div class="slice-hero__copy">
-<p class="eyebrow">From the Slicio board</p>
+<p class="eyebrow" data-wk="why-label">From the Slicio board</p>
 <h1 class="display-xl page-title slice-hero__title" id="page-title">Tavern Sausage</h1>
 <p class="lead">Cracker-thin crust, sausage, party cut.</p>
 <p class="slice-hero__story">Chicago tavern style: paper-thin crisp crust, sausage to the edge, cut in squares.</p>
@@ -74,10 +76,8 @@
 </div>
 <p class="slice-hero__pairs"><span class="allergens__label">Goes with</span> Marinara and Hot Honey</p>
 
-<ul class="slice-hero__why"><li>Was on the board the week of October 19.</li></ul>
-<p class="slice-hero__actions">
-<a class="btn" href="../../menu/">See this week’s board</a>
-
+<ul class="slice-hero__why" data-wk="why-list"><li>Was on the board the week of October 19.</li></ul>
+<p class="slice-hero__actions" data-wk="why-actions"><a class="btn" href="../../menu/">See this week’s board</a>
 </p>
 <p class="slice-hero__fine">Slicio isn’t open yet. This is a preview of a slice we plan to make, and the recipe can change before launch. If you have a serious allergy, ask the team before you eat.</p>
 </div>
@@ -120,6 +120,6 @@
 </div>
 </div>
 <p class="site-footer__fine">Slicio Pizza is a student startup and is not open yet. Menus, rewards and any prices shown are plans and can change. &copy; 2026 Slicio Pizza.</p>
-</footer>
+</footer><script>window.slicioWeek&&slicioWeek.run()</script>
 </body>
 </html>
