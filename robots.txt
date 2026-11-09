@@ -4,4 +4,5 @@ Disallow: /team/menu/
 Disallow: /team/orders/
 Disallow: /team/table/
 Disallow: /team/results/
+Disallow: /tasting/
 Sitemap: https://sliciopizza.com/sitemap.xml
