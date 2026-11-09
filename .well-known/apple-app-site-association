@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R6R2GW6PSH.com.slicerspizza.app"],
+        "components": [
+          { "/": "/join*", "comment": "Invite links from the Slicio app (https://sliciopizza.com/join?ref=CODE) open the app when it is installed" }
+        ]
+      }
+    ]
+  }
+}
